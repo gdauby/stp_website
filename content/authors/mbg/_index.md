@@ -8,7 +8,7 @@ name: Missouri Botanical Garden
 organizations:
 - name: Missouri Botanical Garden
   url: "http://www.missouribotanicalgarden.org/"
-role: Main institute
+role: Supporting institute
 social:
 - icon: twitter
   icon_pack: fab

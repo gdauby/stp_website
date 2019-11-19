@@ -29,10 +29,10 @@ social:
   link: https://github.com/gdauby
 superuser: true
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
 Gilles Dauby is a Research Associate at [French National Research Institute for Sustainable Development](https://en.ird.fr/) at [AMAP joint unit](http://amap.cirad.fr/en/index.php).
 
 
-Contact: **gilles.dauby@ird.fr**
+Contact: **gilles.dauby(at)ird.fr**

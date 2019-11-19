@@ -1,8 +1,7 @@
 ---
 authors:
 - admin
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+bio: 
 email: ""
 interests:
 - Orchids taxonomy
@@ -22,11 +21,11 @@ social:
   link: https://twitter.com/StevartTariq
 superuser: true
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
-Assistant Curator
+Associate Curator
 [Africa and Madagascar program of the Missouri Botanical Garden](http://www.missouribotanicalgarden.org/plant-science/plant-science/africa.aspx)
 
 
-Contact: **tariq.stevart@mobot.org**
+Contact: **tariq.stevart(at)mobot.org**

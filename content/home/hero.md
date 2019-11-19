@@ -36,13 +36,17 @@ hero_media = ""
 # Call to action links (optional).
 #   Display link(s) by specifying a URL and label below. Icon is optional for `[cta]`.
 #   Remove a link/note by deleting a cta/note block.
-
+[cta]
+  url = "http://tropicos.org/Project/Threatened_Plants_STP"
+  label = "TROPICOS project"
+  icon_pack = "fas"
+  icon = "leaf"
 
 # Note. An optional note to show underneath the links.
 
 +++
 
-This website present the team, aims and news of the CEPF project focused on the characterization of the threatened flora of __São Tomé e Principe__ archipelago
+Team, partners and news from the [CEPF project](https://www.cepf.net/grants/grantee-projects/characterization-threatened-flora-sao-tome-and-principe) focused on the **characterization of the threatened flora of __São Tomé e Principe__ archipelago**
 
 If you are interested in plant species recorded in __São Tomé e Principe__, all records and species will be documented in a dedicated [TROPICOS PROJECT](http://tropicos.org/Project/Threatened_Plants_STP)
 
