@@ -1,0 +1,44 @@
+---
+title: "Newsletters - October 2019"
+author: 'null'
+date: '2019-11-20'
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+lastmod: '2019-11-20T10:46:13+01:00'
+categories: []
+projects: []
+slug: newsletters-from-the-field-october-2019
+subtitle: October 2019
+summary: ''
+tags: []
+authors: []
+---
+
+# Launching meeting
+
+All the team went to São Tomé in october and noveùber 2019. An official launching meeting was organized the 19th of October in Bom Successo Botanical Garden.
+
+```{r ,include=TRUE, out.width='100%', echo=F}
+knitr::include_graphics("/img/20191018_094842.jpg")
+```
+
+
+# Training
+
+After officially launching the project, training was organized to teach collecting data in the forests, press herbarium specimens, identify families and common species etc...
+
+
+```{r ,include=TRUE, out.width='100%', echo=F}
+knitr::include_graphics("/img/20191018_094842.jpg")
+```
+
+
+

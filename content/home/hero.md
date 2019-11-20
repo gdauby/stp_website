@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Sao Tomé y Principe Threatened flora"
+title = "The threatened flora of São Tomé e Príncipe"
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media = ""
@@ -26,7 +26,7 @@ hero_media = ""
   # Background image.
   image = "forest.jpg"  # Name of image in `static/img/`.
   image_darken = 0.1  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
-  image_size = "contain"  #  Options are `cover` (default), `contain`, or `actual` size.
+  image_size = "cover"  #  Options are `cover` (default), `contain`, or `actual` size.
   image_position = "center"  # Options include `left`, `center` (default), or `right`.
   image_parallax = true  # Use a fun parallax-like fixed background effect? true/false
   
@@ -46,8 +46,8 @@ hero_media = ""
 
 +++
 
-Team, partners and news from the [CEPF project](https://www.cepf.net/grants/grantee-projects/characterization-threatened-flora-sao-tome-and-principe) focused on the **characterization of the threatened flora of __São Tomé e Principe__ archipelago**
+Team, partners and news from the [CEPF project](https://www.cepf.net/grants/grantee-projects/characterization-threatened-flora-sao-tome-and-principe) focused on the **characterization of the threatened flora of __São Tomé e Príncipe__ archipelago**
 
-If you are interested in plant species recorded in __São Tomé e Principe__, all records and species will be documented in a dedicated [TROPICOS PROJECT](http://tropicos.org/Project/Threatened_Plants_STP)
+Plant species list and records of __São Tomé e Príncipe__, will be documented and available soon in a dedicated __TROPICOS PROJECT__
 
 

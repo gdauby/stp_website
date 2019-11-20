@@ -19,4 +19,4 @@ user_groups:
 ---
 
 
-Contact: **laura.benitez(at)fauna-flora.org **
+Contact: **laura.benitez(at)fauna-flora.org**
