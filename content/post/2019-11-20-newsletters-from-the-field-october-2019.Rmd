@@ -37,7 +37,7 @@ After officially launching the project, training was organized to teach collecti
 
 
 ```{r ,include=TRUE, out.width='100%', echo=F}
-knitr::include_graphics("/img/20191018_094842.jpg")
+knitr::include_graphics("/img/20191021_164639.jpg")
 ```
 
 
