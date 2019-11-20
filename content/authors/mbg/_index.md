@@ -15,6 +15,6 @@ social:
   link: https://twitter.com/StevartTariq
 superuser: true
 user_groups:
-- Partners
+- Project holder
 ---
 
