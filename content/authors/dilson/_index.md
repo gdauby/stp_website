@@ -4,7 +4,7 @@ authors:
 bio: 
 email: ""
 interests:
-name: Dilson
+name: Dilson Yordanis Lima da Silva
 organizations:
 - name: 
   url: ""

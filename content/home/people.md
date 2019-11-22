@@ -17,7 +17,7 @@ subtitle = ""
                 "Partners",
                 "Principal Investigators",
                  "Researchers",
-                 "Administration",
+                 "Collaborators",
                  "Visitors",
                  "Alumni"]
 

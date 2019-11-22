@@ -4,7 +4,7 @@ authors:
 bio: 
 email: ""
 interests:
-name: Angela Lima
+name: Angela dos Santos Trindade Lima
 organizations:
 - name: 
   url: ""

@@ -4,9 +4,9 @@ authors:
 bio: 
   matter.
 email: ""
-name: Missouri Botanical Garden
+name: MBG
 organizations:
-- name: Missouri Botanical Garden
+- name: MBG
   url: "http://www.missouribotanicalgarden.org/"
 role: Supporting institute
 social:

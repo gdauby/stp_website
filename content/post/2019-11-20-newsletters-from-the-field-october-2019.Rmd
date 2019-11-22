@@ -1,43 +1,69 @@
 ---
 title: "Newsletters - October 2019"
-author: 'null'
-date: '2019-11-20'
+author: "Gilles Dauby"
+date: "`r Sys.Date()`"
 output:
-  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
-  word_document: default
+  pdf_document: default
 featured: no
 image:
   caption: ''
   focal_point: ''
   preview_only: no
-lastmod: '2019-11-20T10:46:13+01:00'
+lastmod: "`r Sys.Date()`"
 categories: []
 projects: []
-slug: newsletters-from-the-field-october-2019
+slug: newsletters-from-the-field-october
 subtitle: October 2019
 summary: ''
 tags: []
-authors: []
+authors: [gilles]
 ---
 
-# Launching meeting
+```{r, echo=F, include=T}
 
-All the team went to São Tomé in october and noveùber 2019. An official launching meeting was organized the 19th of October in Bom Successo Botanical Garden.
+# header:
+#   caption: ''
+#   image: 'Banner.png'
 
-```{r ,include=TRUE, out.width='100%', echo=F}
-knitr::include_graphics("/img/20191018_094842.jpg")
+# doc.type <- "local_rmd"
+doc.type <- "blog"
+
+```
+
+# Kick-off meeting
+
+The team met in São Tomé in october and november 2019. 
+  
+The official kick off meeting was organized the 19th of October in [Bom Successo Botanical Garden](https://www.openstreetmap.org/#map=14/0.2888/6.6108).
+
+
+
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Many people attented the kick off meeting which was officialy introduced by Mr Francisco Ramos, Ministério de Agricultura, Pesca e Desenvolvimento Rural, and Jean-Baptiste Deffontaines, Project Manager at BirdLife International"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/20191018_094842.jpg")
+if(doc.type=="blog") knitr::include_graphics("/img/20191018_094842.jpg")
 ```
 
 
 # Training
 
-After officially launching the project, training was organized to teach collecting data in the forests, press herbarium specimens, identify families and common species etc...
+A two-weeks training was organized following the kick-off meeting. Many topics were adressed: how to collect and manage plant specimens, how to establish tree inventories, how to identify families and species, how to encode botanical datasets, how to use GPS...
+
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Learning how to press specimens in Bom Successo Botanical Garden"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/20191021_164639.jpg")
+if(doc.type=="blog") knitr::include_graphics("/img/20191021_164639.jpg")
+```
+
+# The 'dry' lowlands forests in the north of São Tomé
+
+Several days of field works were organized in the northern vegetation of São Tomé. Despite the fact this area is easily accessible, its flora remains poorly documented probably because the vegetation has the reputation to be highly degraded. The northern coast of São Tomé is indeed the most populated area of the island. We specifically explored two localited: the valley behind [Praia Ribeira Funda](https://www.openstreetmap.org/#map=16/0.3669/6.5797) and the protected area of [Praia Das Conchas](https://www.openstreetmap.org/#map=15/0.3956/6.6032). The numerous specimens collected in this area still to be properly identified at the herbarium but preliminary observations and identifications already emphasize both the uniqueness of this vegetation for the archipelago and the numerous threats it is facing. Several interesting plant species were observed among which a probably new species of liana of the genus __Uvaria__ (Annonaceae), a new species of tree of the genus __Cleistanthus__ (Phyllanthaceae). In the southern part of Ribeira Funda (near Ribeira Funda roça), a very interesting patch of relatively intact forest was explored where species such as the endemic trees  __Staudtia pterocarpa__ ('Pao vermelho') and __Mesogyne henriquesii__.
 
 
-```{r ,include=TRUE, out.width='100%', echo=F}
-knitr::include_graphics("/img/20191021_164639.jpg")
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="An aerial view of 'dry' lowland forest in the north of São Tomé island, near the village of Plancas II. The forest looks in relatively good shape from there, but in fact native forests and species are scarce and highly threatened by human activities. "}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/DJI_0826.JPG")
+if(doc.type=="blog") knitr::include_graphics("/img/DJI_0826.JPG")
 ```
 
 
