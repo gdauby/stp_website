@@ -11,7 +11,7 @@ name: Tariq Stévart
 organizations:
 - name: Missouri Botanical Garden
   url: ""
-role: Assistant curator
+role: Associate curator
 social:
 - icon: envelope
   icon_pack: fas
