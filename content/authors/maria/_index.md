@@ -8,7 +8,7 @@ name: Maria Do Céu Madureira
 organizations:
 - name: University of Coimbra
   url: ""
-role: 
+role: CFE
 social:
 superuser: true
 user_groups:
