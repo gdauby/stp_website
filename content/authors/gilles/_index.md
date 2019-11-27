@@ -15,9 +15,6 @@ organizations:
   url: ""
 role: Research Associate
 social:
-- icon: envelope
-  icon_pack: fas
-  link: 'gilles.dauby@ird.fr'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/gildauby

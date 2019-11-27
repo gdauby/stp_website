@@ -12,7 +12,7 @@ role: Supporting institute
 social:
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/StevartTariq
+  link: https://twitter.com/MoBot_Research
 superuser: true
 user_groups:
 - Project holder
