@@ -16,7 +16,7 @@ lastmod: "`r Sys.Date()`"
 categories: []
 projects: []
 slug: newsletters-from-the-field-october
-subtitle: "October"
+subtitle: "Outubro"
 summary: ''
 tags: []
 authors: [gilles, maria, tariq]
@@ -33,35 +33,35 @@ doc.type <- "blog"
 
 ```
 
-# Kick-off meeting
+# Reunião de Apresentação do Projecto
 
-The project team met in São Tomé in october and november 2019 for the first training/field campaign.
+A equipa do projecto encontrou-se em São Tomé em Outubro e Novembro 2019 para a primeira sessão de treino / expedições no terreno.
   
-The official kick-off meeting was organized the 18th of October at the [Bom Successo Botanical Garden](https://www.openstreetmap.org/#map=14/0.2888/6.6108).
+O Lançamento oficial do Projecto decorreu no dia 18 de Outubro no [Jardim Botânico de Bom Sucesso](https://www.openstreetmap.org/#map=14/0.2888/6.6108).
 
 
-
-```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Many people attended the kick off meeting organized in collaboration with ECOFAC which was officially introduced by Francisco Ramos, Minister of Agriculture, Fisheries and Rural Development Rural, and João D’Alva, Director of Forests and Bodiversity"}
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="A reunião de lançamento do Projecto, organizada em colaboração com a ECOFAC 6, contou com a participação de muitos técnicos e representantes de diversas instituições, e a Sessão de Abertura foi presidida por Francisco Ramos, Ministro da Agricultura, Pescas e Desenvolvimento Rural, e contou também com João D’Alva, Director das Florestas e Biodiversidade."}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/20191018_094637.jpg")
 if(doc.type=="blog") knitr::include_graphics("/img/20191018_094637.jpg")
 ```
 
 
-# Training
+# Treino
 
-A two-weeks training was organized following the kick-off meeting. Many topics were addressed: how to collect, press and manage plant specimens, how to establish tree inventories, how to identify families and species, how to enter botanical datasets, how to use GPS…
+Após a reunião de lançamento do projecto foi organizada a primeira sessão de treino intensivo, com a duração de duas semanas. Foram abordados inúmeros tópicos: métodos de colheita, preparação de materiais de herbário (montagem, prensagem e secagem); metodologias para a realização de inventários de árvores e biodiversidade; identificação científica de famílias e espécies; tratamento informático dos dados botânicos; utilização de GPS…
 
-```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Learning how to press specimens."}
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Aprendendo a preparar exemplares de Herbário no Jardim Botânico de Bom Successo e nas expedições de campo."}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/pressing.png")
 if(doc.type=="blog") knitr::include_graphics("/img/pressing.png")
 ```
 
-# The 'dry' lowlands forests in the north of São Tomé
-
-Several days of field works were organized in the northern area of São Tomé where the flora remains poorly documented, probably because the vegetation is  highly degraded. We explored the valley behind [Praia Ribeira Funda](https://www.openstreetmap.org/#map=16/0.3669/6.5797) and the protected area of [Praia Das Conchas](https://www.openstreetmap.org/#map=15/0.3956/6.6032). Preliminary observations and identifications already emphasize both the uniqueness of this vegetation and the severe threats it is facing. Several interesting species were observed among which a probably new species of liana of the genus _Uvaria_ (Annonaceae), and a new species of tree of the genus _Cleistanthus_ (Phyllanthaceae). In the southern part of Ribeira Funda (near Ribeira Funda roça), one of the last patch of relatively intact northern forest was explored where species such as the endemic trees _Staudtia pterocarpa_ ('Pao vermelho') and _Mesogyne henriquesii_. This unique evidence of the forest that covered the north part of Sao Tomé is highly threatened and will disappear quite soon if nothing is done.
+# As florestas ‘secas’ de baixa altitude na zona norte de São Tomé
 
 
-```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="An aerial view of 'dry' lowland forest in the north of São Tomé island, near the village of Plancas II. The forest looks in relatively good shape from there, but in fact native forests and species are scarce and highly threatened by human activities. "}
+Foram organizadas várias saídas de campo na zona norte de São Tomé, onde a flora se encontra fracamente documentada, provavelmente devido ao facto da vegetação se encontrar altamente degradada. Foram exploradas as zonas do Vale da [Praia Ribeira Funda](https://www.openstreetmap.org/#map=16/0.3669/6.5797) e a àrea protegida da [Praia das Conchas](https://www.openstreetmap.org/#map=15/0.3956/6.6032). As observações e identificações preliminares enfatizam desde já a especificidade única da vegetação destas zonas e alertam igualmente para as graves ameaças a que esta está sujeita. Foram observadas várias espécies muito interessantes, entre as quais uma liana do género _Uvaria_ (Annonaceae), provavelmente uma nova espécie, e também uma nova espécie de árvore do género _Cleistanthus_ (Phyllanthaceae). Numa zona mais a sul da Ribeira Funda (perto da Roça Ribeira Funda), tivemos a oportunidade de explorar um dos últimos redutos com floresta da zona norte ainda relativamente intacta, e onde registamos espécies tais como as árvores endémicas _Staudtia pterocarpa_ (‘Pau-vermelho’) e _Mesogyne henriquesii_. Os dados agora recolhidos demonstram bem a singularidade da floresta que cobre a zona norte de São Tomé e simultaneamente evidenciam o seu elevado grau de ameaça e alertam para o seu rápido desaparecimento se nada for feito para a proteger.
+
+
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Uma vista aérea da floresta ‘seca’ de baixa altitude no norte da ilha de S. Tomé, perto da comunidade de Plancas I. A floresta aparenta estar em boa forma desta perspectiva, mas de facto as florestas nativas e as espécies nativas são actualmente raras e encontram-se altamente ameaçadas por actividades antrópicas."}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/DJI_0865.JPG")
 if(doc.type=="blog") knitr::include_graphics("/img/DJI_0865.JPG")
 ```

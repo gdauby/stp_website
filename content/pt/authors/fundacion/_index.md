@@ -11,6 +11,6 @@ organizations:
 role: Partner
 superuser: true
 user_groups:
-- Parceiras
+- Parceiros
 ---
 

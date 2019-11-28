@@ -15,6 +15,6 @@ social:
   link: https://twitter.com/univdecoimbra
 superuser: true
 user_groups:
-- Parceiras
+- Parceiros
 ---
 

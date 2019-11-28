@@ -15,6 +15,6 @@ social:
   link: https://twitter.com/ird_fr
 superuser: true
 user_groups:
-- Parceiras
+- Parceiros
 ---
 

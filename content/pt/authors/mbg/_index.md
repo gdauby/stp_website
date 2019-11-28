@@ -15,6 +15,6 @@ social:
   link: https://twitter.com/MoBot_Research
 superuser: true
 user_groups:
-- Detentor do projeto
+- Coordenador do Projecto
 ---
 

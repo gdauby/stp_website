@@ -7,17 +7,17 @@ headless = false  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 15  # Order that this section will appear.
 
-title = "Conheça o equipe"
+title = "Conheça a equipa"
 subtitle = ""
 
 [content]
   # Choose which groups/teams of users to display.
   #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
-  user_groups = ["Detentor do projeto", 
-                "Parceiras",
+  user_groups = ["Coordenador do Projecto", 
+                "Parceiros",
                 "Investigadores Principais",
                  "Pesquisadores",
-                 "Contribuidores",
+                 "Colaboradores",
                  "Visitors",
                  "Estudantes"]
 
