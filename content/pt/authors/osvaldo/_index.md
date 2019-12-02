@@ -1,10 +1,10 @@
 ---
 authors:
-- davide
+- osvaldo
 bio: 
 email: ""
 interests:
-name: Davide Dias
+name: Osvaldo Lima
 organizations:
 - name: 
   url: ""
