@@ -4,11 +4,14 @@ authors:
 bio: 
 email: ""
 interests:
+- Tropical Biodiversity
+- Conservation
+- Pollination
 name: Laura Benitez
 organizations:
-- name: Fauna and Flora International
+- name: Fauna & Flora International
   url: ""
-role: Project manager
+role: Conservation Assistant
 social:
 - icon: twitter
   icon_pack: fab
@@ -18,5 +21,6 @@ user_groups:
 - Researchers
 ---
 
+Laura Benitez is Conservation Assistant for Fauna & Flora International based in Príncipe Island and working with Fundação Príncipe. 
 
 Contact: **laura.benitez(at)fauna-flora.org**
