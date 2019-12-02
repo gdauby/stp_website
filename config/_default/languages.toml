@@ -23,6 +23,10 @@
     name = "Galeria"
     url = "#gallery"
     weight = 30
+  [[pt.menu.main]]
+    name = "Documento de arquivos"
+    url = "#archives"
+    weight = 40
   
 #  title = "Chinese website title..."
 #  [zh.params]
