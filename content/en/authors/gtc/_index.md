@@ -6,11 +6,11 @@ bio:
 email: ""
 name: Global Tree Campaign
 organizations:
-- name: Fondation Franklinia
+- name: Global Tree Campaign
   url: "https://globaltrees.org/"
 role: Partner
 superuser: true
 user_groups:
-- Partners
+- Collaboration
 ---
 

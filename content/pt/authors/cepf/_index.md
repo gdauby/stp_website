@@ -15,6 +15,6 @@ social:
   link: https://twitter.com/CommunityCEPF
 superuser: true
 user_groups:
-- Funding
+- Financiamento
 ---
 
