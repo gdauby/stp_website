@@ -12,13 +12,17 @@
   languageCode = "pt"
   contentDir = "content/pt"
   [[pt.menu.main]]
-    name = "Pessoas"
+    name = "Equipa e Parceiros"
     url = "#people"
     weight = 10
   [[pt.menu.main]]
     name = "Notícias"
     url = "#posts"
     weight = 20
+  [[pt.menu.main]]
+    name = "Referente a projeto"
+    url = "#about"
+    weight = 25
   [[pt.menu.main]]
     name = "Galeria"
     url = "#gallery"
