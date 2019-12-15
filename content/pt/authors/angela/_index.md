@@ -8,11 +8,11 @@ name: Angela Lima
 organizations:
 - name: 
   url: ""
-role: 
+role: Estagiária DFB
 social:
 superuser: true
 user_groups:
-- Estudantes
+- Estudantes & Equipa Técnica
 ---
 
 

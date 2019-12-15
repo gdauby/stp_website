@@ -1,14 +1,14 @@
 ---
 authors:
-- antonio
+- estevao
 bio: 
 email: ""
 interests:
-name: António Alberto
+name: Estevão Soares
 organizations:
 - name: 
   url: ""
-role: Guia / Colector
+role: Parataxonomista / Eco-Guia PNOST
 social:
 superuser: true
 user_groups:

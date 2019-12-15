@@ -15,7 +15,7 @@ role: Assistant
 social:
 superuser: true
 user_groups:
-- Pesquisadores
+- Investigadores
 ---
 
 Assistant

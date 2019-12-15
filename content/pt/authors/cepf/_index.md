@@ -8,13 +8,13 @@ name: CEPF
 organizations:
 - name: CEPF
   url: "https://www.cepf.net/"
-role: Supporting institute
+role:
 social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/CommunityCEPF
 superuser: true
 user_groups:
-- Financiamento
+- Instituição Financiadora
 ---
 

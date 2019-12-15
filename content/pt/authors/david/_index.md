@@ -8,11 +8,11 @@ name: Davide Dias
 organizations:
 - name: 
   url: ""
-role: Field botanist
+role: Botânico de campo
 social:
 superuser: true
 user_groups:
-- Estudantes
+- Estudantes & Equipa Técnica
 ---
 
 
