@@ -4,15 +4,15 @@ authors:
 bio: 
 email: ""
 interests:
-name: Pascual Souza
+name: Pascoal Sousa
 organizations:
 - name: 
   url: ""
-role: 
+role: Forestry Technician
 social:
 superuser: true
 user_groups:
-- Alumni
+- Alumni & Technical Team
 ---
 
 

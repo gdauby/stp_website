@@ -4,15 +4,15 @@ authors:
 bio: 
 email: ""
 interests:
-name: Antonio
+name: António Alberto
 organizations:
 - name: 
   url: ""
-role: 
+role: Guide / Collector
 social:
 superuser: true
 user_groups:
-- Alumni
+- Alumni & Technical Team
 ---
 
 

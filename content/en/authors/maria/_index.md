@@ -4,11 +4,11 @@ authors:
 bio: 
 email: ""
 interests:
-name: Maria Do Céu Madureira
+name: Maria do Céu Madureira
 organizations:
 - name: University of Coimbra
   url: ""
-role: CFE
+role: Researcher, CFE
 social:
 superuser: true
 user_groups:
@@ -17,3 +17,5 @@ user_groups:
 
 
 Contact: **mceu.madureira(at)gmail.com**
+
+See her [ResearchGate site](https://www.researchgate.net/profile/Maria_Madureira2)

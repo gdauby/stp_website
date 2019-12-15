@@ -12,7 +12,7 @@ role: Field botanist
 social:
 superuser: true
 user_groups:
-- Alumni
+- Alumni & Technical Team
 ---
 
 
