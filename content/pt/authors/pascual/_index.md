@@ -4,15 +4,15 @@ authors:
 bio: 
 email: ""
 interests:
-name: Pascual Souza
+name: Pascoal Sousa
 organizations:
 - name: 
   url: ""
-role: 
+role: Técnico Florestal, DFB
 social:
 superuser: true
 user_groups:
-- Estudantes
+- Estudantes & Equipa Técnica
 ---
 
 

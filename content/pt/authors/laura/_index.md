@@ -18,7 +18,7 @@ social:
   link: https://twitter.com/lahbenitez
 superuser: true
 user_groups:
-- Researchers
+- Investigadores
 ---
 
 Laura Benitez is Conservation Assistant for Fauna & Flora International based in Príncipe Island and working with Fundação Príncipe. 

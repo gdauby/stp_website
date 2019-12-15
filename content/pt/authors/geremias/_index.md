@@ -8,11 +8,11 @@ name: Geremias Carvalho
 organizations:
 - name: 
   url: ""
-role: Field botanist
+role: Botânico de campo
 social:
 superuser: true
 user_groups:
-- Alumni
+- Estudantes & Equipa Técnica
 ---
 
 

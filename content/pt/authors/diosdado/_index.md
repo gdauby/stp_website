@@ -12,7 +12,7 @@ role: Botânico
 social:
 superuser: true
 user_groups:
-- Pesquisadores
+- Investigadores
 ---
 
 

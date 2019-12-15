@@ -8,10 +8,10 @@ name: Faustino Oliveira
 organizations:
 - name: Herbário Nacional de São Tomé e Principe (STPH)
   url: ""
-role: Curator
+role: Curador STPH
 social:
 superuser: true
 user_groups:
-- Pesquisadores
+- Investigadores
 ---
 

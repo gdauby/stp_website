@@ -6,13 +6,13 @@ email: ""
 interests:
 name: Lewis Eduardo
 organizations:
-- name: Herbário Nacional de São Tomé e Principe
+- name: Herbário Nacional de São Tomé e Principe (STPH)
   url: ""
-role: 
+role: Técnico STPH
 social:
 superuser: true
 user_groups:
-- Estudantes
+- Estudantes & Equipa Técnica
 ---
 
 

@@ -8,11 +8,11 @@ name: Julien Engel
 organizations:
 - name: Institut de Recherche pour le Développement
   url: ""
-role: Forest engineer
+role: Engenheiro Florestal
 social:
 superuser: true
 user_groups:
-- Pesquisadores
+- Investigadores
 ---
 
 Veja seu [site pessoal](https://julienengel.wixsite.com/julienengel)

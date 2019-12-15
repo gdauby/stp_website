@@ -8,11 +8,11 @@ name: Dilson Madre Deus
 organizations:
 - name: 
   url: ""
-role: 
+role: Estagiário DFB
 social:
 superuser: true
 user_groups:
-- Estudantes
+- Estudantes & Equipa Técnica
 ---
 
 
