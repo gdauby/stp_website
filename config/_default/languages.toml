@@ -22,7 +22,7 @@
   [[pt.menu.main]]
     name = "Referente a projeto"
     url = "#about"
-    weight = 25
+    weight = 5
   [[pt.menu.main]]
     name = "Galeria"
     url = "#gallery"

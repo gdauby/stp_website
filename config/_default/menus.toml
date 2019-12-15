@@ -16,7 +16,7 @@
 [[main]]
   name = "About the project"
   url = "#about"
-  weight = 25
+  weight = 5
 
 [[main]]
   name = "Gallery"

@@ -12,7 +12,7 @@ role: Parataxonomist / Ecoguide PNOST
 social:
 superuser: true
 user_groups:
-- Alumni & Technical Teams
+- Alumni & Technical Team
 ---
 
 
