@@ -38,7 +38,7 @@ hero_media = ""
 #   Remove a link/note by deleting a cta/note block.
 [cta]
   url = "http://tropicos.org/Project/Threatened_Plants_STP"
-  label = "projecto TROPICOS"
+  label = "projeto TROPICOS"
   icon_pack = "fas"
   icon = "leaf"
 

@@ -8,7 +8,7 @@ name: Direção de Florestas e Biodiversidade
 organizations:
 - name: Direção de Florestas e Biodiversidade
   url:
-role: Partner
+role:
 superuser: true
 user_groups:
 - Collaboration & Stakeholders
