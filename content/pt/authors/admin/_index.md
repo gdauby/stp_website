@@ -5,7 +5,7 @@ bio:
 education:
 email: ""
 interests:
-name: São Tomé e Príncipe Threatened Flora
+name: Flora Ameaçada de S. Tomé e Príncipe
 organizations:
 - name:
   url: ""
@@ -37,16 +37,16 @@ user_groups:
 
 • Caracterizar a sua distribuição e seu habitat e as ameaças que enfrentam actualmente.  
 
-• Com base nestes dados, reavaliar a rede das principais áreas de biodiversidade de STP.  
+• Com base nestes dados, reavaliar a rede das principais áreas chave da biodiversidade de STP.  
 
-• Treinar botânicos e técnicos locais e equipar os dois herbarias (ST e P).  
+• Treinar botânicos e técnicos locais e equipar os dois Herbários (STPH e P).  
 
 
 ## Resultados  
 
 • Uma base de dados unificada e de código aberto com a ocorrências de espécies de plantas ameaçadas de STP.  
 
-• Estado de conservação da IUCN de todas as espécies de plantas ameaçadas de STP.  
+• Estatuto de conservação da IUCN de todas as espécies das plantas ameaçadas de STP.  
 
 • Capacitação de uma nova geração de botânicos e técnicos de STP.  
 

@@ -20,7 +20,7 @@
     url = "#posts"
     weight = 20
   [[pt.menu.main]]
-    name = "Referente a projeto"
+    name = "O projeto"
     url = "#about"
     weight = 5
   [[pt.menu.main]]
@@ -28,7 +28,7 @@
     url = "#gallery"
     weight = 30
   [[pt.menu.main]]
-    name = "Documento de arquivos"
+    name = "Arquivo de documentos"
     url = "#archives"
     weight = 40
   
