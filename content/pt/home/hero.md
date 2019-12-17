@@ -48,7 +48,7 @@ hero_media = ""
 
 
 
-Equipa, parceiros e notícias do [projeto CEPF](https://www.cepf.net/grants/grantee-projects/characterization-threatened-flora-sao-tome-and-principe) focado na **caracterização da flora ameaçada do arquipélago de São Tomé e Príncipe**
+Equipa, parceiros e notícias do [projeto CEPF](https://www.cepf.net/grants/grantee-projects/characterization-threatened-flora-sao-tome-and-principe) ( __Fundo de Parceria para Ecossistemas Críticos__ ) focado na **caracterização da flora ameaçada do arquipélago de São Tomé e Príncipe**
 
 A lista de espécies vegetais e os registos de __São Tomé e Príncipe__ serão documentados e estarão disponíveis em breve em um __PROJETO TROPICOS__ específico
 
