@@ -40,6 +40,9 @@ hero_media = ""
 
 Find [HERE](/pdf/protocle_tr_fr.pdf) (in french) a notice on the methodology followed in the field to make vegetation transects.
 
+Find [HERE](/pdf/MBG Grievance Mechanism - English.pdf) the grivance mechanism providing an avenue for stakeholders to voice their concerns and gives transparency on how grievances will be managed internally, which aims to reduce conflict and strengthen relationships with external stakeholders. 
+
+
 See others document in the portuguese section.
 
 

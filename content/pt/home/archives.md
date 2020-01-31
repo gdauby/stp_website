@@ -40,6 +40,6 @@ hero_media = ""
 Encontre [AQUI](/pdf/protocole_tr_pt.pdf) um documento sobre a metodologia seguida no campo para fazer transectos da vegetação.
 
 
-
+Encontre [AQUI](/pdf/MBG Grievance Mechanism - Portuguese.pdf) processo de partilha de preocupações. Fornece um procedimento para as partes interessadas expressarem as suas preocupações, assegurando assim a transparência no modo como as preocupações são geridas internamente.
 
 
