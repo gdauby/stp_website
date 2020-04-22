@@ -1,21 +1,25 @@
 ---
 title: "Newsletters 2"
 author: ""
-date: "2020-04-22"
-output:
+date: ""
+output: 
+  bookdown::pdf_document2:
+    extra_dependencies: ["float"]
+    toc: False
+  word_document: default
   html_document:
     df_print: paged
-  word_document: default
-  pdf_document: default
 header-includes: 
    \usepackage{graphicx}
+   \usepackage{float}
+   \floatplacement{figure}{H}
    \usepackage{fancyhdr}
    \usepackage{eurosym}
    \usepackage{booktabs,xcolor}
    \pagestyle{fancy}
    \fancyhf{}
    \addtolength{\headheight}{1.0cm}
-   \lhead{\includegraphics[width=2cm]{logo.png}}
+   \chead{\includegraphics[width=7cm]{banner2.jpg}}
    \fancypagestyle{plain}{\pagestyle{fancy}}
 featured: no
 image:
@@ -26,7 +30,7 @@ lastmod: "2020-04-22"
 categories: []
 projects: []
 slug: newsletters-from-the-field-april
-subtitle: "October"
+subtitle: "April 2020"
 summary: ''
 tags: []
 authors: [gilles, maria, tariq, laura]
