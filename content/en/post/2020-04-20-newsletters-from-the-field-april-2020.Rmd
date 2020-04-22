@@ -1,0 +1,69 @@
+---
+title: "Newsletters 2"
+author: ""
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
+  word_document: default
+  pdf_document: default
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+lastmod: "`r Sys.Date()`"
+categories: []
+projects: []
+slug: newsletters-from-the-field-april
+subtitle: "October"
+summary: ''
+tags: []
+authors: [gilles, maria, tariq]
+---
+
+```{r, echo=F, include=T}
+
+# header:
+#   caption: ''
+#   image: 'Banner.png'
+
+# doc.type <- "local_rmd"
+doc.type <- "blog"
+
+```
+
+# Interregional collaboration
+
+In order to develop the interregional collaboration, two Gabonese botanists participated to the second field campaign and shared their expertise with the saotomean team. [Diosdado Nguema](https://cepf-stp-threat-flora.netlify.app/authors/diosdado/) and [Davy Ikabanga](https://cepf-stp-threat-flora.netlify.app/authors/davy/), representing the new generation of African plant taxonomist, are among one of the best tree specialists, arrived in Sao Tomé in February, and field explored the most remote places of the island.
+
+
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Photos of the team during the field campaign in February 2020"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/foto_grouped_hor.png")
+if(doc.type=="blog") knitr::include_graphics("/img/foto_grouped_hor.png")
+```
+
+
+# Finding rare and endemic species
+
+The first expedition in Sao Tomé was, scientifically, a great success. In a period of three weeks, many localities were visited, from the dry North to the wet South and from the coast to the summit of the Pico (2024 m). Thus, most of São Tomé’s vegetation types were prospected. Great news from the point of view of conservation, more than 75% of the island’s endemic woody species were found! Some very rare species were rediscovered, including *Balthasaria mannii* (Ternstroemiaceae) and *Psychotria exellii* (Rubiaceae), both restricted to montane forest near the summit of the Pico and not seen for more than 50 years.
+
+
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="On the left: *Psychotria exellii*. On the right *Balthasaria mannii*"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/psycho_balthasar.png")
+if(doc.type=="blog") knitr::include_graphics("/img/psycho_balthasar.png")
+```
+
+
+# News from Príncipe
+
+The expeditions in Príncipe started in December 2019. With two new staff members, the team performed general collection in four localities, in lowland forest and at the summit of Pico Príncipe (947 m), and also two new transects. Our botanists are focused on collecting good samples of rare and interesting species, found on the previous 24 localities of Príncipe, to identify the species. In the next weeks, we will intensify the surveys, including in the North of the Island.
+
+
+```{r ,include=TRUE, out.width='80%', echo=F, fig.cap="The challenge to get good material from dominant tree"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/principe1.png")
+if(doc.type=="blog") knitr::include_graphics("/img/principe1.png")
+```
+
+
+
