@@ -3,10 +3,20 @@ title: "Newsletters 2"
 author: ""
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
-  word_document: default
-  pdf_document: default
+header-includes: 
+   \usepackage{graphicx}
+   \usepackage{fancyhdr}
+   \usepackage{eurosym}
+   \usepackage{booktabs,xcolor}
+   \pagestyle{fancy}
+   \fancyhf{}
+   \addtolength{\headheight}{1.0cm}
+   \lhead{\includegraphics[width=2cm]{logo.png}}
+   \fancypagestyle{plain}{\pagestyle{fancy}}
 featured: no
 image:
   caption: ''
@@ -22,14 +32,16 @@ tags: []
 authors: [gilles, maria, tariq, laura]
 ---
 
+
+
 ```{r, echo=F, include=T}
 
 # header:
 #   caption: ''
 #   image: 'Banner.png'
 
-# doc.type <- "local_rmd"
-doc.type <- "blog"
+#doc.type <- "local_rmd"
+ doc.type <- "blog"
 
 ```
 
@@ -44,12 +56,15 @@ if(doc.type=="blog") knitr::include_graphics("/img/foto_grouped_hor.png")
 ```
 
 
+
+
+
 # Descobrindo espécies endémicas e raras
 
 A primeira Missão de Expedições em São Tomé foi um grande sucesso, do ponto de vista científico, Num período de 3 semanas, muitas localidades foram exploradas, desde as florestas da zona seca do Norte à zona húmida do Sul, e desde as zonas baixas costeiras até ao cume do Pico (2024 m). Assim, a maioria dos diferentes tipos de vegetação de São Tomé foram prospectados. E há óptimas notícias relativamente à conservação da flora, com mais de 75% das espécies arbóreas endémicas da ilha encontradas no decurso das expedições! Algumas espécies muito raras foram redescobertas, incluindo *Balthasaria mannii* (Ternstroemiaceae) e *Psychotria exellii* (Rubiaceae), ambas restrictas a zonas de floresta de montanha, perto do cume do Pico e que não eram vistas ou recolhidas há mais de 50 anos.
 
 
-```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Esquerda: *Psychotria exellii*. Direita  *Balthasaria mannii*"}
+```{r ,include=TRUE, out.width='100%', echo=F, fig.cap="Esquerda: *Psychotria exellii*. Direita:  *Balthasaria mannii* (photos credit: O. Lachenaud)"}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/psycho_balthasar.png")
 if(doc.type=="blog") knitr::include_graphics("/img/psycho_balthasar.png")
 ```
@@ -60,7 +75,7 @@ if(doc.type=="blog") knitr::include_graphics("/img/psycho_balthasar.png")
 As expedições no Príncipe começaram em Dezembro de 2019. Com dois novos membros, a equipa realizou a colheita geral em quatro localidades, incluindo a floresta de baixa altitude e o cume do Pico Príncipe (947 m), além de dois novos transectos. Os nossos botânicos estão focados em recolher boas amostras de espécies raras e interessantes, que foram encontradas nas 24 localidades previamente levantadas no Príncipe, de modo a contribuir para a identificação das espécies. 
 
 
-```{r ,include=TRUE, out.width='80%', echo=F, fig.cap="O desafio de obter um bom material da árvore dominante"}
+```{r ,include=TRUE, out.width='80%', echo=F, fig.cap="O desafio de obter um bom material da árvore dominante (photos credit: L. Benitez)"}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/principe1.png")
 if(doc.type=="blog") knitr::include_graphics("/img/principe1.png")
 ```

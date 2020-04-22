@@ -3,10 +3,20 @@ title: "Newsletters 2"
 author: ""
 date: "2020-04-22"
 output:
+  pdf_document: default
+  word_document: default
   html_document:
     df_print: paged
-  word_document: default
-  pdf_document: default
+header-includes: 
+   \usepackage{graphicx}
+   \usepackage{fancyhdr}
+   \usepackage{eurosym}
+   \usepackage{booktabs,xcolor}
+   \pagestyle{fancy}
+   \fancyhf{}
+   \addtolength{\headheight}{1.0cm}
+   \lhead{\includegraphics[width=2cm]{logo.png}}
+   \fancypagestyle{plain}{\pagestyle{fancy}}
 featured: no
 image:
   caption: ''
@@ -38,9 +48,9 @@ Figure 1: Fotos da equipe durante a campanha de campo em fevereiro de 2020
 <h1>Descobrindo espécies endémicas e raras</h1>
 <p>A primeira Missão de Expedições em São Tomé foi um grande sucesso, do ponto de vista científico, Num período de 3 semanas, muitas localidades foram exploradas, desde as florestas da zona seca do Norte à zona húmida do Sul, e desde as zonas baixas costeiras até ao cume do Pico (2024 m). Assim, a maioria dos diferentes tipos de vegetação de São Tomé foram prospectados. E há óptimas notícias relativamente à conservação da flora, com mais de 75% das espécies arbóreas endémicas da ilha encontradas no decurso das expedições! Algumas espécies muito raras foram redescobertas, incluindo <em>Balthasaria mannii</em> (Ternstroemiaceae) e <em>Psychotria exellii</em> (Rubiaceae), ambas restrictas a zonas de floresta de montanha, perto do cume do Pico e que não eram vistas ou recolhidas há mais de 50 anos.</p>
 <div class="figure"><span id="fig:unnamed-chunk-3"></span>
-<img src="/img/psycho_balthasar.png" alt="Esquerda: *Psychotria exellii*. Direita  *Balthasaria mannii*" width="100%" />
+<img src="/img/psycho_balthasar.png" alt="Esquerda: *Psychotria exellii*. Direita:  *Balthasaria mannii* (photos credit: O. Lachenaud)" width="100%" />
 <p class="caption">
-Figure 2: Esquerda: <em>Psychotria exellii</em>. Direita <em>Balthasaria mannii</em>
+Figure 2: Esquerda: <em>Psychotria exellii</em>. Direita: <em>Balthasaria mannii</em> (photos credit: O. Lachenaud)
 </p>
 </div>
 </div>
@@ -48,9 +58,9 @@ Figure 2: Esquerda: <em>Psychotria exellii</em>. Direita <em>Balthasaria mannii<
 <h1>Notícias do Príncipe</h1>
 <p>As expedições no Príncipe começaram em Dezembro de 2019. Com dois novos membros, a equipa realizou a colheita geral em quatro localidades, incluindo a floresta de baixa altitude e o cume do Pico Príncipe (947 m), além de dois novos transectos. Os nossos botânicos estão focados em recolher boas amostras de espécies raras e interessantes, que foram encontradas nas 24 localidades previamente levantadas no Príncipe, de modo a contribuir para a identificação das espécies.</p>
 <div class="figure"><span id="fig:unnamed-chunk-4"></span>
-<img src="/img/principe1.png" alt="O desafio de obter um bom material da árvore dominante" width="80%" />
+<img src="/img/principe1.png" alt="O desafio de obter um bom material da árvore dominante (photos credit: L. Benitez)" width="80%" />
 <p class="caption">
-Figure 3: O desafio de obter um bom material da árvore dominante
+Figure 3: O desafio de obter um bom material da árvore dominante (photos credit: L. Benitez)
 </p>
 </div>
 </div>
