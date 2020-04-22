@@ -19,7 +19,7 @@ slug: newsletters-from-the-field-april
 subtitle: "October"
 summary: ''
 tags: []
-authors: [gilles, maria, tariq]
+authors: [gilles, maria, tariq, laura]
 ---
 
 ```{r, echo=F, include=T}
