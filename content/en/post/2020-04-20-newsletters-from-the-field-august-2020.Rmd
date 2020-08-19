@@ -90,11 +90,11 @@ africa <-
   read_sf("D:/SIG/Africa/arcgis data/AfricanCountires.shp")
 
 
-greenLeafIcon <- 
-  makeIcon(
-  iconUrl = "https://img.icons8.com/flat_round/64/000000/tree.png",
-  iconWidth = 38, iconHeight = 40,
-  iconAnchorX = 22, iconAnchorY = 94)
+greenLeafIcon <- makeIcon(
+  iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
+  iconWidth = 20, iconHeight = 50,
+  iconAnchorX = 20, iconAnchorY = 50
+)
 
 # ,
 #              clusterOptions = markerClusterOptions(), icon = greenLeafIcon
@@ -115,17 +115,17 @@ transefts_lf <-
              lng = ~ddlon,
              lat = ~ddlat,
              popup = leafpop::popupTable(all_waypoints_sf_tr), 
-             group = "Transects") %>% 
+             group = "Transects", icon = greenLeafIcon) %>% 
   # addLayersControl(
   #   baseGroups = c("Open Street Map"),
   #   overlayGroups = c("Transects"),
   #   options = layersControlOptions(collapsed = F)
   # ) %>% 
   leaflet::fitBounds(
-    lng1 = 6.49,
-    lng2 = 6.59,
-    lat1 = 0.05,
-    lat2 = 0.54
+    lng1 = 6.5,
+    lng2 = 6.6,
+    lat1 = 0.1,
+    lat2 = 0.4
   )
 
 
@@ -145,7 +145,7 @@ transefts_lf_P <-
              lng = ~ddlon,
              lat = ~ddlat,
              popup = leafpop::popupTable(all_waypoints_sf_tr_P), 
-             group = "Transects") %>% 
+             group = "Transects", icon = greenLeafIcon) %>% 
   # addLayersControl(
   #   baseGroups = c("Open Street Map"),
   #   overlayGroups = c("Transects"),
