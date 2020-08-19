@@ -174,7 +174,7 @@ We now have an officiel logo for the project São Tomé e Príncipe Threatened F
 
 
 ```{r ,include=TRUE, out.width='20%', echo=F, fig.cap="Logo"}
-knitr::include_graphics("logo_post.png")
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/logo_proj.png")
 ```
 
 
