@@ -49,6 +49,7 @@ knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
 doc.type <- "blog"
 library(leaflet)
 library(sf)
+library(tmap)
 
 ```
 
@@ -84,10 +85,35 @@ all_waypoints_sf_tr_P <-
   dplyr::filter(!is.na(ddlat), 
          !is.na(ddlon))
 
-
+all_waypoints_sf_tr_P_sf <- 
+  st_as_sf(all_waypoints_sf_tr_P, coords = c("ddlon", "ddlat"))
 
 africa <- 
   read_sf("D:/SIG/Africa/arcgis data/AfricanCountires.shp")
+
+STP <- 
+  africa %>% 
+  dplyr::filter(COUNTRYAFF=="Sao Tome and Principe")
+ST <- STP %>% 
+  dplyr::filter(Land_Type ==  "Medium island")
+P <- STP %>% 
+  dplyr::filter(Land_Type ==  "Small island")
+
+st_crs(all_waypoints_sf_tr_P_sf) <- 
+  4326
+
+
+# osm_NLD <- tmaptools::read_osm(all_waypoints_sf_tr_P_sf)
+# 
+# tm_basemap(leaflet::providers$OpenStreetMap) +
+# tm_shape(P, bbox = tmaptools::bb(matrix(c(
+#   7.32, 1.52, 7.46, 1.69
+# ), nrow = 2))) +
+#   tm_polygons(col = NA, alpha = 0) +
+#   tm_shape(all_waypoints_sf_tr_P_sf) +
+#   tm_dots()
+
+
 
 
 greenLeafIcon <- makeIcon(
@@ -173,7 +199,7 @@ transefts_lf_P <-
 We now have an officiel logo for the project São Tomé e Príncipe Threatened Flora, designed by Victor Jiménez. It represents the two islands as leaves. For more information about the project, we invite you to visit our [website](https://cepf-stp-threat-flora.netlify.app/).
 
 
-```{r ,include=TRUE, out.width='20%', echo=F, fig.cap="Logo"}
+```{r ,include=TRUE, out.width='20%', echo=F, fig.align="center"}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/logo_proj.png")
 ```
 
@@ -184,7 +210,14 @@ Four of our project members were officially added as Assessors on the Species In
 Since last year, the team has completed the establishment of five transects and has done general collection at 16 localities, producing more than 300 numbers, despite the Covid pandemic. The team also began a small nursery with six tree species as part of our ex-situ conservation initiative. The map below show the locations of the newly-established transects on Príncipe. 
 
 ```{r, echo=F}
+
+if(doc.type=="local_rmd")
+transefts_lf_P
+
+if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf_P, width='90%')
+
+
 ```
 
 
@@ -193,8 +226,13 @@ widgetframe::frameWidget(transefts_lf_P, width='90%')
 The second field campaign on São Tomé was scheduled to take place between mid-February and the end of March, involving the now fully-trained São Tomean team as well as foreign botanists, namely Olivier Lachenaud, Davy Ikabanga, Diosdado Nguema, Julien Engel, and Gilles Dauby. Unfortunately, because of the Covid 19 pandemic and the resulting lockdown, field work had to be interruptd before completion.  Consequently, the team was unable to collect data at several localities initially identified, but despite these difficulties, more than a thousand numbers were collected. We also established 13 transects within which all trees with a diameter of at least 5 cm were measured and identified, and all species were collected. The map below shows the locations of all of the transects established to date on the island.
 
 ```{r, echo=F}
+if(doc.type=="local_rmd")
+transefts_lf
 
+if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf, width='90%')
+
+
 ```
 
 \fontsize{22}{22}

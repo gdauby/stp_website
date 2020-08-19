@@ -1,0 +1,239 @@
+---
+title: "Newsletters 3"
+author: ""
+date: ""
+output: 
+  bookdown::pdf_document2:
+    extra_dependencies: ["float"]
+    toc: False
+  word_document: default
+  html_document:
+    df_print: paged
+header-includes: 
+   \usepackage{graphicx}
+   \usepackage{float}
+   \floatplacement{figure}{H}
+   \usepackage{fancyhdr}
+   \usepackage{eurosym}
+   \usepackage{booktabs,xcolor}
+   \pagestyle{fancy}
+   \fancyhf{}
+   \addtolength{\headheight}{1.0cm}
+   \chead{\includegraphics[width=7cm]{banner2.jpg}}
+   \fancypagestyle{plain}{\pagestyle{fancy}}
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+lastmod: "`r Sys.Date()`"
+categories: []
+projects: []
+slug: newsletters-from-the-field-august-pt
+subtitle: "Agosto 2020"
+summary: ''
+tags: []
+authors: [gilles, maria, tariq, laura]
+---
+
+```{r, echo=F, include=T, message=F, warning=F}
+
+# header:
+#   caption: ''
+#   image: 'Banner.png'
+
+#doc.type <- "local_rmd"
+knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
+knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
+# doc.type <- "local_rmd"
+doc.type <- "blog"
+library(leaflet)
+library(sf)
+library(tmap)
+
+```
+
+
+
+
+
+```{r, echo=F, include=T, eval=T, warning=F, message=F}
+
+all_waypoints_sf_tr <- 
+   readr::read_csv("D:/MonDossierR/stp_website/content/en/post/Lista_Transecto_ST.csv", 
+           locale = readr::locale(encoding = "latin1"))
+
+all_waypoints_sf_tr <- 
+  all_waypoints_sf_tr %>% 
+  dplyr::group_by(Nome_transect) %>% 
+  dplyr::summarise(ddlat = mean(lat_decimal, na.rm = T),
+                   ddlon = mean(long_decimal, na.rm = T),
+                   locality = dplyr::first(localidad)) %>% 
+  dplyr::filter(!is.na(ddlat), 
+         !is.na(ddlon))
+
+all_waypoints_sf_tr_P <- 
+   readr::read_csv("D:/MonDossierR/stp_website/content/en/post/Lista_Transecto_P.csv", 
+           locale = readr::locale(encoding = "latin1"))
+
+all_waypoints_sf_tr_P <- 
+  all_waypoints_sf_tr_P %>% 
+  dplyr::group_by(`Num-Transect`) %>% 
+  dplyr::summarise(ddlat = mean(ddlat, na.rm = T),
+                   ddlon = mean(ddlon, na.rm = T),
+                   locality = dplyr::first(LocaliteHerbiers)) %>% 
+  dplyr::filter(!is.na(ddlat), 
+         !is.na(ddlon))
+
+all_waypoints_sf_tr_P_sf <- 
+  st_as_sf(all_waypoints_sf_tr_P, coords = c("ddlon", "ddlat"))
+
+africa <- 
+  read_sf("D:/SIG/Africa/arcgis data/AfricanCountires.shp")
+
+STP <- 
+  africa %>% 
+  dplyr::filter(COUNTRYAFF=="Sao Tome and Principe")
+ST <- STP %>% 
+  dplyr::filter(Land_Type ==  "Medium island")
+P <- STP %>% 
+  dplyr::filter(Land_Type ==  "Small island")
+
+st_crs(all_waypoints_sf_tr_P_sf) <- 
+  4326
+
+
+# osm_NLD <- tmaptools::read_osm(all_waypoints_sf_tr_P_sf)
+# 
+# tm_basemap(leaflet::providers$OpenStreetMap) +
+# tm_shape(P, bbox = tmaptools::bb(matrix(c(
+#   7.32, 1.52, 7.46, 1.69
+# ), nrow = 2))) +
+#   tm_polygons(col = NA, alpha = 0) +
+#   tm_shape(all_waypoints_sf_tr_P_sf) +
+#   tm_dots()
+
+
+
+
+greenLeafIcon <- makeIcon(
+  iconUrl = "http://leafletjs.com/examples/custom-icons/leaf-green.png",
+  iconWidth = 20, iconHeight = 50,
+  iconAnchorX = 20, iconAnchorY = 50
+)
+
+# ,
+#              clusterOptions = markerClusterOptions(), icon = greenLeafIcon
+
+transefts_lf <- 
+  leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
+  addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
+  leaflet::addPolygons(data = africa, 
+                       fillColor = "black",
+                       weight = 1,
+                       opacity = 0.1,
+                       color = NA,
+                       dashArray = "3",
+                       fillOpacity = 0.1, 
+                       group = "Countries",
+                       label = "Countries") %>%
+  addMarkers(data = all_waypoints_sf_tr, 
+             lng = ~ddlon,
+             lat = ~ddlat,
+             popup = leafpop::popupTable(all_waypoints_sf_tr), 
+             group = "Transects", icon = greenLeafIcon) %>% 
+  # addLayersControl(
+  #   baseGroups = c("Open Street Map"),
+  #   overlayGroups = c("Transects"),
+  #   options = layersControlOptions(collapsed = F)
+  # ) %>% 
+  leaflet::fitBounds(
+    lng1 = 6.5,
+    lng2 = 6.6,
+    lat1 = 0.1,
+    lat2 = 0.4
+  )
+
+
+transefts_lf_P <- 
+  leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
+  addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
+  leaflet::addPolygons(data = africa, 
+                       fillColor = "black",
+                       weight = 1,
+                       opacity = 0.1,
+                       color = NA,
+                       dashArray = "3",
+                       fillOpacity = 0.1, 
+                       group = "Countries",
+                       label = "Countries") %>%
+  addMarkers(data = all_waypoints_sf_tr_P, 
+             lng = ~ddlon,
+             lat = ~ddlat,
+             popup = leafpop::popupTable(all_waypoints_sf_tr_P), 
+             group = "Transects", icon = greenLeafIcon) %>% 
+  # addLayersControl(
+  #   baseGroups = c("Open Street Map"),
+  #   overlayGroups = c("Transects"),
+  #   options = layersControlOptions(collapsed = F)
+  # ) %>% 
+  leaflet::fitBounds(
+    lng1 = 7.33,
+    lng2 = 7.435,
+    lat1 = 1.542,
+    lat2 = 1.699
+  )
+
+
+# dir.create("static/leaflet", showWarnings = FALSE)
+# setwd("static/leaflet")
+# htmlwidgets::saveWidget(transefts_lf_P, "transefts_lf_P.html")
+# setwd(currentWD)
+
+```
+
+#	Um logo-tipo para o Projecto!
+
+Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e Príncipe, criado por Victor Jiménez. Representa esquematicamente as duas ilhas como folhas. Para mais informações sobre o projecto, convidamos a visitar o nosso [website](https://cepf-stp-threat-flora.netlify.app/).
+
+
+```{r ,include=TRUE, out.width='20%', echo=F, fig.align="center"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/logo_proj.png")
+```
+
+
+# Notícias da Ilha do Príncipe
+
+Quatro membros da nossa equipa foram oficialmente incluídos como Assessores na interface do Serviço de Informação de Espécies (SIS) da Lista Vermelha de Espécies Ameaçadas™ do IUCN, incluindo o Curador do Herbário Nacional de São Tomé e Príncipe e o nosso parataxonomista da ilha do Príncipe. Isto foi realizado no âmbito do projecto “Lista das espécies de árvores ameaçadas da ilha do Príncipe”, que tem vindo a ser implementado nos últimos anos por Fauna & Flora International e pela Fundação Príncipe, com o apoio da Global Trees Campaign, e em colaboração com vários parceiros nacionais e internacionais. Um dos objectivos deste nosso projecto financiado pelo CEPF, é a capacitação de pelo menos mais 3 jovens participantes locais como Assessores, contribuindo desta forma para o aumento do conhecimento local, e garantindo que este conhecimento fica no país, muito para além do termo do projecto. A equipa do Príncipe iniciou o treino de dois membros em Junho.
+Desde o ano passado, a equipa realizou 5 transectos e fez colheitas gerais em 16 localidades, recolhendo mais de 300 números de exemplars de herbário, apesar da pandemia do Covid 19. A equipa estabeleceu ainda um pequeno viveiro com 6 espécies de árvores, em cumprimento da nossa iniciativa de conservação ex-situ de espécies. No mapa abaixo, estão localizados os transectos recentemente realizados na ilha do Príncipe. The map below show the locations of the newly-established transects on Príncipe.
+
+
+```{r, echo=F}
+
+if(doc.type=="local_rmd")
+transefts_lf_P
+
+if(doc.type=="blog")
+widgetframe::frameWidget(transefts_lf_P, width='90%')
+
+
+```
+
+
+# A segunda missão no terreno em São Tomé  foi um sucesso, apesar da pandemia pelo Covid 19
+
+A segunda campanha de expedições em São Tomé, estava planificada para decorrer entre meados de Fevereiro e o final de Março, envolvendo a actual e já bem treinada equipa de técnicos santomenses, bem como os experientes botânicos e taxonomistas estrangeiros Olivier Lachenaud, Davy Ikabanga, Diosdado Nguema, Julien Engel, e Gilles Dauby. Infelizmente, devido à pandemia por Covid 19 e ao resultante confinamento obrigatório, o trabalho de campo teve que ser interrompido antes do seu final.  Consequentemente, a equipa não conseguiu fazer recolhas de dados e de espécies em todos os locais inicialmente previstos, mas apesar destes constrangimentos  foram colhidos mais de 1.000 exemplares de herbário. Foram ainda realizados 13 novos transectos, nos quais foram medidas e identificadas todas as árvores com um diâmetro igual ou superior a 5 cm, e todas as espécies foram recolhidas. O mapa que se segue, indica a localização de todos os transectos realizados até ao momento na ilha de São Tomé.
+
+```{r, echo=F}
+
+if(doc.type=="local_rmd")
+transefts_lf
+
+if(doc.type=="blog")
+widgetframe::frameWidget(transefts_lf, width='90%')
+
+
+```
+
+\fontsize{22}{22}
+*Find more information on the [WEBSITE](https://cepf-stp-threat-flora.netlify.app/#about)*
