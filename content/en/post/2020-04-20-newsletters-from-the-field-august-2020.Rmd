@@ -158,6 +158,7 @@ transefts_lf_P <-
     lat2 = 1.699
   )
 
+
 # dir.create("static/leaflet", showWarnings = FALSE)
 # setwd("static/leaflet")
 # htmlwidgets::saveWidget(transefts_lf_P, "transefts_lf_P.html")
@@ -183,8 +184,9 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 Four of our project members were officially added as Assessors on the Species Information Service (SIS) interface of the IUCN Red List of Threatened Species™, including the Curator of the Herbarium of São Tomé and Príncipe and the parataxonomist based on Príncipe. This was accomplished as part of the project “Red Listing of the most threatened tree species of Príncipe”, implemented over the last several years by Fauna & Flora International and Fundação Príncipe, with support from Global Trees Campaign, in collaboration with various partners. As part of our CEPF-funded project, we will also train at least three new local participants to be Assessors, further contributing to increased local knowledge that will stay in the country well beyond the end of the project. The team on Príncipe team started training two members this June.
 Since last year, the team has completed the establishment of five transects and has done general collection at 16 localities, producing more than 300 numbers, despite the Covid pandemic. The team also began a small nursery with six tree species as part of our ex-situ conservation initiative. The map below show the locations of the newly-established transects on Príncipe. 
 
-<iframe seamless src="/static/leaflet/transefts_lf_P/index.html" width="100%" height="500"></iframe>
-
+```{r}
+widgetframe::frameWidget(transefts_lf_P, width='90%')
+```
 
 
 # A succesful second field campaign on São Tomé despite the lockdown
