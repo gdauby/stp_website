@@ -169,7 +169,7 @@ We now have an officiel logo for the project São Tomé e Príncipe Threatened F
 
 ```{r ,include=TRUE, out.width='20%', echo=F, fig.cap="Logo"}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/avatar.png")
-if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png")
+# if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png")
 ```
 
 
@@ -180,7 +180,9 @@ Since last year, the team has completed the establishment of five transects and 
 
 
 ```{r, echo=F}
-transefts_lf_P
+widgetframe::frameWidget(transefts_lf_P, width='90%')
+
+
 ```
 
 
@@ -189,7 +191,8 @@ transefts_lf_P
 The second field campaign on São Tomé was scheduled to take place between mid-February and the end of March, involving the now fully-trained São Tomean team as well as foreign botanists, namely Olivier Lachenaud, Davy Ikabanga, Diosdado Nguema, Julien Engel, and Gilles Dauby. Unfortunately, because of the Covid 19 pandemic and the resulting lockdown, field work had to be interruptd before completion.  Consequently, the team was unable to collect data at several localities initially identified, but despite these difficulties, more than a thousand numbers were collected. We also established 13 transects within which all trees with a diameter of at least 5 cm were measured and identified, and all species were collected. The map below shows the locations of all of the transects established to date on the island.
 
 ```{r, echo=F}
-transefts_lf
+
+widgetframe::frameWidget(transefts_lf, width='90%')
 ```
 
 \fontsize{22}{22}
