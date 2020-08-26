@@ -18,9 +18,12 @@ header-includes:
    \usepackage{booktabs,xcolor}
    \pagestyle{fancy}
    \fancyhf{}
-   \addtolength{\headheight}{1.0cm}
+   \addtolength{\headheight}{0.cm}
    \chead{\includegraphics[width=7cm]{banner2.jpg}}
    \fancypagestyle{plain}{\pagestyle{fancy}}
+   \usepackage{wrapfig}
+   \usepackage{lipsum}
+   \usepackage{multicol}
 featured: no
 image:
   caption: ''
@@ -29,12 +32,14 @@ image:
 lastmod: "`r Sys.Date()`"
 categories: []
 projects: []
-slug: newsletters-from-the-field-august-pt
+slug: newsletters-from-the-field-august
 subtitle: "Agosto 2020"
 summary: ''
 tags: []
 authors: [gilles, maria, tariq, laura]
 ---
+
+\vspace{-30truemm}
 
 ```{r, echo=F, include=T, message=F, warning=F}
 
@@ -43,18 +48,14 @@ authors: [gilles, maria, tariq, laura]
 #   image: 'Banner.png'
 
 #doc.type <- "local_rmd"
-knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
-knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
+# knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
+# knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
 # doc.type <- "local_rmd"
 doc.type <- "blog"
 library(leaflet)
 library(sf)
-library(tmap)
 
 ```
-
-
-
 
 
 ```{r, echo=F, include=T, eval=T, warning=F, message=F}
@@ -128,15 +129,15 @@ greenLeafIcon <- makeIcon(
 transefts_lf <- 
   leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
-  leaflet::addPolygons(data = africa, 
-                       fillColor = "black",
-                       weight = 1,
-                       opacity = 0.1,
-                       color = NA,
-                       dashArray = "3",
-                       fillOpacity = 0.1, 
-                       group = "Countries",
-                       label = "Countries") %>%
+  # leaflet::addPolygons(data = africa, 
+  #                      fillColor = "black",
+  #                      weight = 1,
+  #                      opacity = 0.1,
+  #                      color = NA,
+  #                      dashArray = "3",
+  #                      fillOpacity = 0.1, 
+  #                      group = "Countries",
+  #                      label = "Countries") %>%
   addMarkers(data = all_waypoints_sf_tr, 
              lng = ~ddlon,
              lat = ~ddlat,
@@ -158,15 +159,15 @@ transefts_lf <-
 transefts_lf_P <- 
   leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
-  leaflet::addPolygons(data = africa, 
-                       fillColor = "black",
-                       weight = 1,
-                       opacity = 0.1,
-                       color = NA,
-                       dashArray = "3",
-                       fillOpacity = 0.1, 
-                       group = "Countries",
-                       label = "Countries") %>%
+  # leaflet::addPolygons(data = africa, 
+  #                      fillColor = "black",
+  #                      weight = 1,
+  #                      opacity = 0.1,
+  #                      color = NA,
+  #                      dashArray = "3",
+  #                      fillOpacity = 0.1, 
+  #                      group = "Countries",
+  #                      label = "Countries") %>%
   addMarkers(data = all_waypoints_sf_tr_P, 
              lng = ~ddlon,
              lat = ~ddlat,
@@ -192,26 +193,62 @@ transefts_lf_P <-
 
 ```
 
-#	Um logo-tipo para o Projecto!
 
-Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e Príncipe, criado por Victor Jiménez. Representa esquematicamente as duas ilhas como folhas. Para mais informações sobre o projecto, convidamos a visitar o nosso [website](https://cepf-stp-threat-flora.netlify.app/).
+\begin{multicols}{2}
+  \null \vfill
+\section{Um logo-tipo para o Projecto!}
+Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e Príncipe, criado por Victor Jiménez. Representa esquematicamente as duas ilhas como folhas.
+  \vfill \null
+
+\columnbreak
+  \null \vfill
+  \null \vfill
+  \null \vfill
+  \null \vfill
+  \null \hfill
+  \null \hfill
+  \centering
+  \includegraphics[width=.25\textwidth]{D:/MonDossierR/stp_website/static/img/logo_proj.png}
+  \vfill \null
 
 
-```{r ,include=TRUE, out.width='20%', echo=F, fig.align="center"}
-if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/logo_proj.png")
+\end{multicols}
+
+```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="O novo  Logo-tipo oficial do projeto"}
+
+if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
 ```
 
+# Um logo-tipo para o Projecto!
+Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e Príncipe, criado por Victor Jiménez. Representa esquematicamente as duas ilhas como folhas.
+
+
+
+
+```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Esquerda) A equipa de São Tomé a realizar um transecto no Pico Macuru. (Direita) Amostras recolhido no Príncipe em junho."}
+if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
+```
+
+
+\vspace{-20truemm}
 
 # Notícias da Ilha do Príncipe
 
 Quatro membros da nossa equipa foram oficialmente incluídos como Assessores na interface do Serviço de Informação de Espécies (SIS) da Lista Vermelha de Espécies Ameaçadas™ do IUCN, incluindo o Curador do Herbário Nacional de São Tomé e Príncipe e o nosso parataxonomista da ilha do Príncipe. Isto foi realizado no âmbito do projecto “Lista das espécies de árvores ameaçadas da ilha do Príncipe”, que tem vindo a ser implementado nos últimos anos por Fauna & Flora International e pela Fundação Príncipe, com o apoio da Global Trees Campaign, e em colaboração com vários parceiros nacionais e internacionais. Um dos objectivos deste nosso projecto financiado pelo CEPF, é a capacitação de pelo menos mais 3 jovens participantes locais como Assessores, contribuindo desta forma para o aumento do conhecimento local, e garantindo que este conhecimento fica no país, muito para além do termo do projecto. A equipa do Príncipe iniciou o treino de dois membros em Junho.
-Desde o ano passado, a equipa realizou 5 transectos e fez colheitas gerais em 16 localidades, recolhendo mais de 300 números de exemplars de herbário, apesar da pandemia do Covid 19. A equipa estabeleceu ainda um pequeno viveiro com 6 espécies de árvores, em cumprimento da nossa iniciativa de conservação ex-situ de espécies. No mapa abaixo, estão localizados os transectos recentemente realizados na ilha do Príncipe. The map below show the locations of the newly-established transects on Príncipe.
+Desde o ano passado, a equipa realizou 5 transectos e fez colheitas gerais em 16 localidades, recolhendo mais de 300 números de exemplars de herbário, apesar da pandemia do Covid 19. A equipa estabeleceu ainda um pequeno viveiro com 6 espécies de árvores, em cumprimento da nossa iniciativa de conservação ex-situ de espécies. No mapa abaixo, estão localizados os transectos recentemente realizados na ilha do Príncipe.
+
+
+\vspace{-5truemm}
+
+```{r, echo=F, out.width='57%', fig.align="center", fig.cap="(Esquerda): Mapa dos transectos estabelecidos no Príncipe. (Direita) Amostras recolhido no Príncipe em junho"}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/news3_pics_p.png")
+
+
+```
+
 
 
 ```{r, echo=F}
-
-if(doc.type=="local_rmd")
-transefts_lf_P
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf_P, width='90%')
@@ -219,15 +256,20 @@ widgetframe::frameWidget(transefts_lf_P, width='90%')
 
 ```
 
-
 # A segunda missão no terreno em São Tomé  foi um sucesso, apesar da pandemia pelo Covid 19
 
 A segunda campanha de expedições em São Tomé, estava planificada para decorrer entre meados de Fevereiro e o final de Março, envolvendo a actual e já bem treinada equipa de técnicos santomenses, bem como os experientes botânicos e taxonomistas estrangeiros Olivier Lachenaud, Davy Ikabanga, Diosdado Nguema, Julien Engel, e Gilles Dauby. Infelizmente, devido à pandemia por Covid 19 e ao resultante confinamento obrigatório, o trabalho de campo teve que ser interrompido antes do seu final.  Consequentemente, a equipa não conseguiu fazer recolhas de dados e de espécies em todos os locais inicialmente previstos, mas apesar destes constrangimentos  foram colhidos mais de 1.000 exemplares de herbário. Foram ainda realizados 13 novos transectos, nos quais foram medidas e identificadas todas as árvores com um diâmetro igual ou superior a 5 cm, e todas as espécies foram recolhidas. O mapa que se segue, indica a localização de todos os transectos realizados até ao momento na ilha de São Tomé.
 
-```{r, echo=F}
 
-if(doc.type=="local_rmd")
-transefts_lf
+```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Esquerda): Mapa dos transectos estabelecidos no São Tomé. (Direita) A equipa de São Tomé a realizar um transecto no Pico Macuru."}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/transect_st_news3.png")
+
+
+```
+
+
+```{r, echo=F, out.width='80%', fig.align="center"}
+
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf, width='90%')
@@ -235,5 +277,9 @@ widgetframe::frameWidget(transefts_lf, width='90%')
 
 ```
 
+
+\vspace{10truemm}
+
+
 \fontsize{22}{22}
-*Find more information on the [WEBSITE](https://cepf-stp-threat-flora.netlify.app/#about)*
+*Encontre mais informações sobre o [WEBSITE](https://cepf-stp-threat-flora.netlify.app/pt/)*

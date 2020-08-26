@@ -18,9 +18,12 @@ header-includes:
    \usepackage{booktabs,xcolor}
    \pagestyle{fancy}
    \fancyhf{}
-   \addtolength{\headheight}{1.0cm}
+   \addtolength{\headheight}{0.cm}
    \chead{\includegraphics[width=7cm]{banner2.jpg}}
    \fancypagestyle{plain}{\pagestyle{fancy}}
+   \usepackage{wrapfig}
+   \usepackage{lipsum}
+   \usepackage{multicol}
 featured: no
 image:
   caption: ''
@@ -36,6 +39,8 @@ tags: []
 authors: [gilles, maria, tariq, laura]
 ---
 
+\vspace{-28truemm}
+
 ```{r, echo=F, include=T, message=F, warning=F}
 
 # header:
@@ -43,18 +48,14 @@ authors: [gilles, maria, tariq, laura]
 #   image: 'Banner.png'
 
 #doc.type <- "local_rmd"
-knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
-knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
+# knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
+# knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
 # doc.type <- "local_rmd"
 doc.type <- "blog"
 library(leaflet)
 library(sf)
-library(tmap)
 
 ```
-
-
-
 
 
 ```{r, echo=F, include=T, eval=T, warning=F, message=F}
@@ -128,15 +129,15 @@ greenLeafIcon <- makeIcon(
 transefts_lf <- 
   leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
-  leaflet::addPolygons(data = africa, 
-                       fillColor = "black",
-                       weight = 1,
-                       opacity = 0.1,
-                       color = NA,
-                       dashArray = "3",
-                       fillOpacity = 0.1, 
-                       group = "Countries",
-                       label = "Countries") %>%
+  # leaflet::addPolygons(data = africa, 
+  #                      fillColor = "black",
+  #                      weight = 1,
+  #                      opacity = 0.1,
+  #                      color = NA,
+  #                      dashArray = "3",
+  #                      fillOpacity = 0.1, 
+  #                      group = "Countries",
+  #                      label = "Countries") %>%
   addMarkers(data = all_waypoints_sf_tr, 
              lng = ~ddlon,
              lat = ~ddlat,
@@ -158,15 +159,15 @@ transefts_lf <-
 transefts_lf_P <- 
   leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
-  leaflet::addPolygons(data = africa, 
-                       fillColor = "black",
-                       weight = 1,
-                       opacity = 0.1,
-                       color = NA,
-                       dashArray = "3",
-                       fillOpacity = 0.1, 
-                       group = "Countries",
-                       label = "Countries") %>%
+  # leaflet::addPolygons(data = africa, 
+  #                      fillColor = "black",
+  #                      weight = 1,
+  #                      opacity = 0.1,
+  #                      color = NA,
+  #                      dashArray = "3",
+  #                      fillOpacity = 0.1, 
+  #                      group = "Countries",
+  #                      label = "Countries") %>%
   addMarkers(data = all_waypoints_sf_tr_P, 
              lng = ~ddlon,
              lat = ~ddlat,
@@ -193,26 +194,57 @@ transefts_lf_P <-
 ```
 
 
+\begin{multicols}{2}
+  \null \vfill
+\section{A logo for the project!}
+We now have an officiel logo for the project São Tomé e Príncipe Threatened Flora, designed by Victor Jiménez. It represents the two islands as leaves.
+  \vfill \null
 
-# A logo for the project!
+\columnbreak
+  \null \vfill
+  \null \vfill
+  \null \vfill
+  \null \vfill
+  \null \hfill
+  \null \hfill
+  \centering
+  \includegraphics[width=.25\textwidth]{D:/MonDossierR/stp_website/static/img/logo_proj.png}
+  \vfill \null
 
-We now have an officiel logo for the project São Tomé e Príncipe Threatened Flora, designed by Victor Jiménez. It represents the two islands as leaves. For more information about the project, we invite you to visit our [website](https://cepf-stp-threat-flora.netlify.app/).
+
+\end{multicols}
 
 
-```{r ,include=TRUE, out.width='20%', echo=F, fig.align="center"}
-if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website/static/img/logo_proj.png")
+```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="The new logo for the project"}
+
+if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
 ```
 
+# A logo for the project!
+We now have an officiel logo for the project São Tomé e Príncipe Threatened Flora, designed by Victor Jiménez. It represents the two islands as leaves.
+
+```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Left) The team in São Tomé conducting a transect at Pico Macuru. (Right) Herbarium specimens collected in Príncipe in June."}
+if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
+```
+
+
+\vspace{-18truemm}
 
 # News from Príncipe
 
 Four of our project members were officially added as Assessors on the Species Information Service (SIS) interface of the IUCN Red List of Threatened Species™, including the Curator of the Herbarium of São Tomé and Príncipe and the parataxonomist based on Príncipe. This was accomplished as part of the project “Red Listing of the most threatened tree species of Príncipe”, implemented over the last several years by Fauna & Flora International and Fundação Príncipe, with support from Global Trees Campaign, in collaboration with various partners. As part of our CEPF-funded project, we will also train at least three new local participants to be Assessors, further contributing to increased local knowledge that will stay in the country well beyond the end of the project. The team on Príncipe team started training two members this June.
 Since last year, the team has completed the establishment of five transects and has done general collection at 16 localities, producing more than 300 numbers, despite the Covid pandemic. The team also began a small nursery with six tree species as part of our ex-situ conservation initiative. The map below show the locations of the newly-established transects on Príncipe. 
 
-```{r, echo=F}
 
-if(doc.type=="local_rmd")
-transefts_lf_P
+```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Left) Map of established transects in Príncipe. (Right) Herbarium specimens collected in Príncipe in June."}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/news3_pics_p.png")
+
+
+```
+
+
+
+```{r, echo=F}
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf_P, width='90%')
@@ -225,15 +257,26 @@ widgetframe::frameWidget(transefts_lf_P, width='90%')
 
 The second field campaign on São Tomé was scheduled to take place between mid-February and the end of March, involving the now fully-trained São Tomean team as well as foreign botanists, namely Olivier Lachenaud, Davy Ikabanga, Diosdado Nguema, Julien Engel, and Gilles Dauby. Unfortunately, because of the Covid 19 pandemic and the resulting lockdown, field work had to be interruptd before completion.  Consequently, the team was unable to collect data at several localities initially identified, but despite these difficulties, more than a thousand numbers were collected. We also established 13 transects within which all trees with a diameter of at least 5 cm were measured and identified, and all species were collected. The map below shows the locations of all of the transects established to date on the island.
 
-```{r, echo=F}
-if(doc.type=="local_rmd")
-transefts_lf
+
+
+```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Left) Map of established transects in São Tomé. (Right) The team in São Tomé conducting a transect at Pico Macuru."}
+if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/transect_st_news3.png")
+
+
+```
+
+
+```{r, echo=F, out.width='80%', fig.align="center"}
+
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf, width='90%')
 
 
 ```
+
+
+\vspace{10truemm}
 
 \fontsize{22}{22}
 *Find more information on the [WEBSITE](https://cepf-stp-threat-flora.netlify.app/#about)*
