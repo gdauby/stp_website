@@ -36,7 +36,7 @@ slug: newsletters-from-the-field-august
 subtitle: "Agosto 2020"
 summary: ''
 tags: []
-authors: [gilles, maria, tariq, laura]
+authors: [gilles, maria, laura, tariq]
 ---
 
 \vspace{-30truemm}
@@ -214,20 +214,16 @@ Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e P
 
 \end{multicols}
 
-```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="O novo  Logo-tipo oficial do projeto"}
-
-if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
-```
 
 # Um logo-tipo para o Projecto!
 Já temos um Logo-tipo oficial para o Projecto Flora Ameaçada de São Tomé e Príncipe, criado por Victor Jiménez. Representa esquematicamente as duas ilhas como folhas.
 
 
+```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="O novo  Logo-tipo oficial do projeto"}
 
-
-```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Esquerda) A equipa de São Tomé a realizar um transecto no Pico Macuru. (Direita) Amostras recolhido no Príncipe em junho."}
-if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
+if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
 ```
+
 
 
 \vspace{-20truemm}
@@ -277,6 +273,10 @@ widgetframe::frameWidget(transefts_lf, width='90%')
 
 ```
 
+
+```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Esquerda) A equipa de São Tomé a realizar um transecto no Pico Macuru. (Direita) Amostras recolhido no Príncipe em junho."}
+if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
+```
 
 \vspace{10truemm}
 

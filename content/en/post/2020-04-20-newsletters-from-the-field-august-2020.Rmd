@@ -36,7 +36,7 @@ slug: newsletters-from-the-field-august
 subtitle: "August 2020"
 summary: ''
 tags: []
-authors: [gilles, maria, tariq, laura]
+authors: [gilles, maria, laura, tariq]
 ---
 
 \vspace{-28truemm}
@@ -215,16 +215,15 @@ We now have an officiel logo for the project São Tomé e Príncipe Threatened F
 \end{multicols}
 
 
-```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="The new logo for the project"}
-
-if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
-```
 
 # A logo for the project!
 We now have an officiel logo for the project São Tomé e Príncipe Threatened Flora, designed by Victor Jiménez. It represents the two islands as leaves.
 
-```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Left) The team in São Tomé conducting a transect at Pico Macuru. (Right) Herbarium specimens collected in Príncipe in June."}
-if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
+
+
+```{r ,include=TRUE, out.width='30%', echo=F, fig.align="center", fig.cap="The new logo for the project"}
+
+if(doc.type=="blog") knitr::include_graphics("/img/logo_post.png", error = FALSE)
 ```
 
 
@@ -238,13 +237,11 @@ Since last year, the team has completed the establishment of five transects and 
 
 ```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Left) Map of established transects in Príncipe. (Right) Herbarium specimens collected in Príncipe in June."}
 if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/news3_pics_p.png")
-
-
 ```
 
 
 
-```{r, echo=F}
+```{r, echo=F, fig.cap="Map of established transects in Príncipe."}
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf_P, width='90%')
@@ -266,13 +263,19 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 ```
 
 
-```{r, echo=F, out.width='80%', fig.align="center"}
+```{r, echo=F, out.width='80%', fig.align="center", fig.cap="Map of established transects in São Tomé"}
 
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf, width='90%')
 
 
+```
+
+
+
+```{r ,include=TRUE, out.width='60%', echo=F, fig.align="center", fig.cap="(Left) The team in São Tomé conducting a transect at Pico Macuru. (Right) Herbarium specimens collected in Príncipe in June."}
+if(doc.type=="blog") knitr::include_graphics("/img/news3_pics.png", error = FALSE)
 ```
 
 
