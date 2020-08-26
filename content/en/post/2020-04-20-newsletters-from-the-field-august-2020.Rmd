@@ -241,10 +241,10 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 
 
 
-```{r, echo=F, fig.cap="Map of established transects in Príncipe."}
+```{r, echo=F, fig.align="center", fig.cap="Map of established transects in Príncipe."}
 
 if(doc.type=="blog")
-widgetframe::frameWidget(transefts_lf_P, width='90%')
+widgetframe::frameWidget(transefts_lf_P, width='120%')
 
 
 ```
@@ -263,11 +263,11 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 ```
 
 
-```{r, echo=F, out.width='80%', fig.align="center", fig.cap="Map of established transects in São Tomé"}
+```{r, echo=F, fig.cap="Map of established transects in São Tomé"}
 
 
 if(doc.type=="blog")
-widgetframe::frameWidget(transefts_lf, width='90%')
+widgetframe::frameWidget(transefts_lf, width='120%')
 
 
 ```
