@@ -244,7 +244,7 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 
 
 
-```{r, echo=F}
+```{r, echo=F, fig.cap=" Mapa dos transectos estabelecidos no Príncipe."}
 
 if(doc.type=="blog")
 widgetframe::frameWidget(transefts_lf_P, width='90%')
@@ -264,7 +264,7 @@ if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_ba
 ```
 
 
-```{r, echo=F, out.width='80%', fig.align="center"}
+```{r, echo=F, out.width='80%', fig.align="center", fig.cap="Mapa dos transectos estabelecidos no São Tomé."}
 
 
 if(doc.type=="blog")
