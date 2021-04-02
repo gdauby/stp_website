@@ -1,0 +1,237 @@
+---
+title: "New classification for Sao Tomé"
+author: ""
+date: ""
+output: 
+  html_document:
+    df_print: paged
+  word_document: default
+  bookdown::pdf_document2:
+    extra_dependencies: ["float"]
+    toc: False
+header-includes: 
+   \usepackage{graphicx}
+   \usepackage{float}
+   \floatplacement{figure}{H}
+   \usepackage{fancyhdr}
+   \usepackage{eurosym}
+   \usepackage{booktabs,xcolor}
+   \pagestyle{fancy}
+   \fancyhf{}
+   \addtolength{\headheight}{0.cm}
+   \chead{\includegraphics[width=7cm]{banner2.jpg}}
+   \fancypagestyle{plain}{\pagestyle{fancy}}
+   \usepackage{wrapfig}
+   \usepackage{lipsum}
+   \usepackage{multicol}
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+lastmod: "`r Sys.Date()`"
+categories: []
+projects: []
+slug: new-classification-st
+subtitle: " "
+summary: ''
+tags: []
+authors: [gilles]
+---
+
+\vspace{-28truemm}
+
+```{r, echo=F, include=T, message=F, warning=F}
+
+# header:
+#   caption: ''
+#   image: 'Banner.png'
+
+#doc.type <- "local_rmd"
+# knitr::opts_chunk$set(widgetframe_self_contained = FALSE)
+# knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE)
+# doc.type <- "local_rmd"
+doc.type <- "blog"
+library(leaflet)
+library(sf)
+library(tidyverse)
+
+```
+
+
+```{r, echo=F, include=T, eval=T, warning=F, message=F}
+
+inland_upland_montane <- st_read("D:/MonDossierR/sao_tome_principe/inland_upland_montane.shp", quiet = TRUE)
+inland_upland_submontane <- st_read("D:/MonDossierR/sao_tome_principe/inland_upland_submontane.shp", quiet = TRUE)
+inland_dry_north <- st_read("D:/MonDossierR/sao_tome_principe/inland_dry_north.shp", quiet = TRUE)
+inland_wet_south_lowland <- st_read("D:/MonDossierR/sao_tome_principe/inland_wet_south_lowland.shp", quiet = TRUE)
+all_shores_eco <- st_read("D:/MonDossierR/sao_tome_principe/all_shores_st.shp", quiet = TRUE)
+all_shores_eco <- 
+  all_shores_eco %>% 
+  mutate(type = replace(type, grepl("Mangrove", type), "mangrove")) %>% 
+  mutate(type = replace(type, grepl("mangrove_", type), "mangrove"))
+
+
+mytext_shores <- paste(all_shores_eco$type,
+  sep="") %>%
+  lapply(htmltools::HTML)
+
+mytext_dry <- paste(inland_dry_north$type,
+                       sep="") %>%
+  lapply(htmltools::HTML)
+
+mytext_sub <- paste(inland_upland_submontane$type,
+                    sep="") %>%
+  lapply(htmltools::HTML)
+
+mytext_mont <- paste(inland_upland_montane$type,
+                    sep="") %>%
+  lapply(htmltools::HTML)
+
+mytext_wet <- paste(inland_wet_south_lowland$type,
+                     sep="") %>%
+  lapply(htmltools::HTML)
+
+
+all_ecosystems <-
+  leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, group =  "Esri") %>%
+  addProviderTiles(providers$OpenStreetMap, group =  "OSM") %>%
+  addProviderTiles(providers$OpenTopoMap, group =  "OpenTopoMap") %>%
+  addPolygons(
+    data = st_transform(all_shores_eco, 4326), 
+    stroke = T,
+    weight = 0.5,
+    opacity = 0.5,
+    dashArray = "1",
+    fillOpacity = 0.5,
+    color = ~ colorFactor("viridis", type)(type),
+    group = 'Coastal shores',
+    label = mytext_shores,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "white",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions( 
+      style = list("font-weight" = "normal", padding = "3px 8px"), 
+      textsize = "13px", 
+      direction = "auto"
+    )
+  ) %>%
+  addPolygons(
+    data = st_transform(inland_dry_north, 4326), 
+    stroke = T,
+    weight = 0.5,
+    opacity = 0.5,
+    dashArray = "1",
+    fillOpacity = 0.5,
+    color = ~ colorFactor("magma", type)(type),
+    group = 'Lowland deciduous forest and woodlands',
+    label = mytext_dry,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "white",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions( 
+      style = list("font-weight" = "normal", padding = "3px 8px"), 
+      textsize = "13px", 
+      direction = "auto"
+    )
+  ) %>%
+  addPolygons(
+    data = st_transform(inland_upland_submontane, 4326), 
+    stroke = T,
+    weight = 0.5,
+    opacity = 0.5,
+    dashArray = "1",
+    fillOpacity = 0.5,
+    color = ~ colorFactor("plasma", type)(type),
+    group = 'Submontane rainforests',
+    label = mytext_sub,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "white",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions( 
+      style = list("font-weight" = "normal", padding = "3px 8px"), 
+      textsize = "13px", 
+      direction = "auto"
+    )
+  ) %>%
+  addPolygons(
+    data = st_transform(inland_upland_montane, 4326), 
+    stroke = T,
+    weight = 0.5,
+    opacity = 0.5,
+    dashArray = "1",
+    fillOpacity = 0.5,
+    color = ~ colorFactor("inferno", type)(type),
+    group = 'Montane rainforests and grasslands',
+    label = mytext_mont,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "white",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions( 
+      style = list("font-weight" = "normal", padding = "3px 8px"), 
+      textsize = "13px", 
+      direction = "auto"
+    )
+  ) %>%
+  addPolygons(
+    data = st_transform(inland_wet_south_lowland, 4326), 
+    stroke = T,
+    weight = 0.5,
+    opacity = 0.5,
+    dashArray = "1",
+    fillOpacity = 0.5,
+    color = ~ colorFactor(palette.colors(n=5), type)(type),
+    group = 'Lowland moist and wet forests',
+    label = mytext_wet,
+    highlight = highlightOptions(
+      weight = 5,
+      color = "white",
+      dashArray = "1",
+      fillOpacity = 0.1,
+      bringToFront = TRUE
+    ),
+    labelOptions = labelOptions( 
+      style = list("font-weight" = "normal", padding = "3px 8px"), 
+      textsize = "13px", 
+      direction = "auto"
+    )
+  ) %>% 
+  addLayersControl(
+    baseGroups = c("OSM", "ESRI", "OpenTopoMap"),
+    overlayGroups = c("Coastal shores", 
+                      "Lowland deciduous forest and woodlands",
+                      "Submontane rainforests", 
+                      "Montane rainforests and grasslands",
+                      "Lowland moist and wet forests"),
+    options = layersControlOptions(collapsed = FALSE)
+  )
+
+
+```
+
+
+```{r, echo=F, fig.align="center", fig.cap="New ecosystem classification for Sao Tomé"}
+
+if(doc.type=="blog")
+widgetframe::frameWidget(all_ecosystems, width='120%')
+
+
+```
+

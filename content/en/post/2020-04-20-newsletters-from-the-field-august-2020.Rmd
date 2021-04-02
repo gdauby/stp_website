@@ -127,7 +127,7 @@ greenLeafIcon <- makeIcon(
 #              clusterOptions = markerClusterOptions(), icon = greenLeafIcon
 
 transefts_lf <- 
-  leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
+  leaflet(options = leafletOptions(zoomControl = T)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
   # leaflet::addPolygons(data = africa, 
   #                      fillColor = "black",
@@ -157,7 +157,7 @@ transefts_lf <-
 
 
 transefts_lf_P <- 
-  leaflet(options = leafletOptions(zoomControl = FALSE)) %>% 
+  leaflet(options = leafletOptions(zoomControl = T)) %>% 
   addProviderTiles(providers$OpenStreetMap, group =  "Open Street Map") %>%
   # leaflet::addPolygons(data = africa, 
   #                      fillColor = "black",
