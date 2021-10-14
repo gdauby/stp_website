@@ -232,6 +232,7 @@ all_ecosystems <-
 if(doc.type=="blog")
 widgetframe::frameWidget(all_ecosystems, width='120%')
 
+saveWidget(all_ecosystems, "ecosyst.html")
 
 ```
 
