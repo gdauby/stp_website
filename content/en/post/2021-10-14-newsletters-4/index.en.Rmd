@@ -60,7 +60,7 @@ We conducted a botanical expedition at the Pico de São Tomé that revealed the 
 
 ```{r, echo=F, out.width='55%', fig.align="center", fig.cap="The team that went to the Pico in September 2021"}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/team_pico.jpg")
-if(doc.type=="blog") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/img/team_pico.jpg")
+if(doc.type=="blog") knitr::include_graphics("/img/img/team_pico.jpg")
 ```
 
 \vspace{-10truemm}
@@ -71,7 +71,7 @@ A workshop on Key Biodiversity Areas (KBAs) of São Tomé and Principe was held 
 
 ```{r, echo=F, out.width='70%', fig.align="center", fig.cap="(Left) KBA workshop flyer. (Right) KBA workshop."}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/kba_news4.png")
-# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
 ```
 
 \vspace{-10truemm}
@@ -83,7 +83,7 @@ During the two years of the project, and despite many difficulties linked to the
 
 ```{r, echo=F, out.width='70%', fig.align="center", fig.cap="Increase in number of collections (for São Tomé, Príncipe and Annobon separately) and species since 1850, highlighting the inventories conducted during the project"}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/sampling_trought_time.png")
-# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
 ```
 
 
