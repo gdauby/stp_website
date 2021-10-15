@@ -35,7 +35,7 @@ lastmod: "`r Sys.Date()`"
 categories: []
 projects: []
 slug: []
-subtitle: \vspace{-0.2cm} Outubro 2021 \vspace{-0.6cm}
+subtitle: \vspace{-0.2cm} October 2021 \vspace{-0.6cm}
 summary: ''
 tags: []
 authors: [gilles, maria, laura, tariq]
@@ -61,8 +61,8 @@ doc.type <- "blog"
 Realizamos uma expedição botânica no Pico de São Tomé que revelou a singularidade da cintura de vegetação de *Erica*, a qual ocorre em cumes acima dos 1900 m. Pela primeira vez, foram realizados inventários de vegetação na área, revelando que este ecossistema único não só ocupa uma área muito restrita, mas também está fortemente ameaçado por espécies invasoras, cuja abundância é consequência do corte da vegetação e do plantio de *Cinchona* spp. (Quina) durante a primeira metade do século 20 Estimamos que até 90% da extensão natural desse habitat já possa ter sido perdida. Um dos botânicos da equipa, Olivier Lachenaud, também recolheu e identificou uma nova espécie de *Renealmia*, uma erva gigante pertencente à família do Gengibre, que está restrita à zona acima de 1900 m de altitude, ou seja, uma área de aproximadamente 25 ha. A equipa também começou a documentar a abundância de *Balthasaria mannii*, uma espécie endémica rara.  Suspeitava-se que que essa espécie estivesse extinta, mas entretanto foi encontrado um indivíduo durante os nossos inventários realizados no início do projeto, em Outubro 2019; actualmente, apenas foram encontrados mais 15 indivíduos, durante a nossa última campanha de campo intensiva, em Setembro de 2021. Além disso, não foram observadas mudas, o que sugere que a regeneração da espécie é fraca ou inexistente. Estas observações, confirmam a nossa avaliação de que esta espécie está criticamente ameaçada de extinção (avaliação submetida à Lista Vermelha). Este ecossistema, caracterizado pela vegetação de Erica thomensis e pela flora única que abriga, exige urgentemente ações de conservação dedicadas e mais estudos para fortalecer a nossa compreensão da sua dinâmica e resiliência às mudanças ambientais.
 
 ```{r, echo=F, out.width='55%', fig.align="center", fig.cap="A equipa do Pico em Setembro"}
-if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/team_pico.jpg")
-if(doc.type=="blog") knitr::include_graphics("/img/team_pico.jpg")
+# if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/team_pico.jpg")
+# if(doc.type=="blog") knitr::include_graphics("/img/team_pico.jpg")
 ```
 
 \vspace{-10truemm}
@@ -72,8 +72,8 @@ Um workshop sobre as Áreas Chave da Biodiversidade (KBAs) de São Tomé e Prín
 
 
 ```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Left) KBA workshop flyer. (Right) Workshop KBA realizado em São Tomé."}
-if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/kba_news4.png")
-if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+# if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/kba_news4.png")
+# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
 ```
 
 \vspace{-10truemm}
@@ -84,8 +84,8 @@ Durante os dois anos do projecto, e apesar das muitas dificuldades relacionadas 
 
 
 ```{r, echo=F, out.width='70%', fig.align="center", fig.cap="Aumento do número de espécies colhidas e identificadas desde 1850, com destaque para os inventários realizados durante o projeto Flora Ameaçada."}
-if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/sampling_trought_time_pt.png")
-if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+# if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/sampling_trought_time_pt.png")
+# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
 ```
 
 
