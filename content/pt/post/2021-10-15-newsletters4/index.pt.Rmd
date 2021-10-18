@@ -35,7 +35,7 @@ lastmod: "`r Sys.Date()`"
 categories: []
 projects: []
 slug: []
-subtitle: \vspace{-0.2cm} October 2021 \vspace{-0.6cm}
+subtitle: Outubro 2021
 summary: ''
 tags: []
 authors: [gilles, maria, laura, tariq]
@@ -49,7 +49,7 @@ authors: [gilles, maria, laura, tariq]
 
 # doc.type <- "local_rmd"
 # \vspace{-1.5cm} Newsletters 4^[Encontre mais informações sobre o [WEBSITE](https://cepf-stp-threat-flora.netlify.app/pt/)]
-
+# \vspace{-0.2cm} October 2021 \vspace{-0.6cm}
 
 doc.type <- "blog"
 # library(leaflet)
@@ -60,9 +60,9 @@ doc.type <- "blog"
 # Documentando a singularidade da área do Pico de São Tomé
 Realizamos uma expedição botânica no Pico de São Tomé que revelou a singularidade da cintura de vegetação de *Erica*, a qual ocorre em cumes acima dos 1900 m. Pela primeira vez, foram realizados inventários de vegetação na área, revelando que este ecossistema único não só ocupa uma área muito restrita, mas também está fortemente ameaçado por espécies invasoras, cuja abundância é consequência do corte da vegetação e do plantio de *Cinchona* spp. (Quina) durante a primeira metade do século 20 Estimamos que até 90% da extensão natural desse habitat já possa ter sido perdida. Um dos botânicos da equipa, Olivier Lachenaud, também recolheu e identificou uma nova espécie de *Renealmia*, uma erva gigante pertencente à família do Gengibre, que está restrita à zona acima de 1900 m de altitude, ou seja, uma área de aproximadamente 25 ha. A equipa também começou a documentar a abundância de *Balthasaria mannii*, uma espécie endémica rara.  Suspeitava-se que que essa espécie estivesse extinta, mas entretanto foi encontrado um indivíduo durante os nossos inventários realizados no início do projeto, em Outubro 2019; actualmente, apenas foram encontrados mais 15 indivíduos, durante a nossa última campanha de campo intensiva, em Setembro de 2021. Além disso, não foram observadas mudas, o que sugere que a regeneração da espécie é fraca ou inexistente. Estas observações, confirmam a nossa avaliação de que esta espécie está criticamente ameaçada de extinção (avaliação submetida à Lista Vermelha). Este ecossistema, caracterizado pela vegetação de Erica thomensis e pela flora única que abriga, exige urgentemente ações de conservação dedicadas e mais estudos para fortalecer a nossa compreensão da sua dinâmica e resiliência às mudanças ambientais.
 
-```{r, echo=F, out.width='55%', fig.align="center", fig.cap="A equipa do Pico em Setembro"}
+```{r, echo=F, out.width='80%', fig.align="center", fig.cap="A equipa do Pico em Setembro"}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/team_pico.jpg")
-# if(doc.type=="blog") knitr::include_graphics("/img/team_pico.jpg")
+if(doc.type=="blog") knitr::include_graphics("team_pico.jpg")
 ```
 
 \vspace{-10truemm}
@@ -73,7 +73,7 @@ Um workshop sobre as Áreas Chave da Biodiversidade (KBAs) de São Tomé e Prín
 
 ```{r, echo=F, out.width='60%', fig.align="center", fig.cap="(Left) KBA workshop flyer. (Right) Workshop KBA realizado em São Tomé."}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/kba_news4.png")
-# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+if(doc.type=="blog") knitr::include_graphics("kba_news4.png")
 ```
 
 \vspace{-10truemm}
@@ -83,9 +83,9 @@ Um workshop sobre as Áreas Chave da Biodiversidade (KBAs) de São Tomé e Prín
 Durante os dois anos do projecto, e apesar das muitas dificuldades relacionadas com a pandemia de Covid, extensos inventários foram realizados em ambas as ilhas. Os resultados aumentaram significativamente o nosso conhecimento sobre a flora do país: foram realizadas mais de 2.900 colheitas (correspondendo a cerca de 20% de todos os registos georreferenciados já recolhidos no arquipélago), e representando 370 espécies de plantas, das quais mais de 50 foram registadas pela primeira vez no país e mais de 20 são novas para a ciência. Também aumentámos o conjunto de dados de transectos de vegetação que já existiam no Príncipe, estabelecendo 38 novos transectos. No geral, foram feitos 50 transectos de vegetação nas florestas de São Tomé (além de 50 transectos em áreas rurais e urbanas), juntamente com 56 transectos no Príncipe, produzindo dados muito precisos sobre a ocorrência de árvores e sua abundância nas duas ilhas, e tornando possível fornecer uma estimativa mais informada do risco de extinção para as espécies de plantas endémicas, e ao mesmo tempo identificar os habitats ameaçados.
 
 
-```{r, echo=F, out.width='70%', fig.align="center", fig.cap="Aumento do número de espécies colhidas e identificadas desde 1850, com destaque para os inventários realizados durante o projeto Flora Ameaçada."}
+```{r, echo=F, out.width='100%', fig.align="center", fig.cap="Aumento do número de espécies colhidas e identificadas desde 1850, com destaque para os inventários realizados durante o projeto Flora Ameaçada."}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/sampling_trought_time_pt.png")
-# if(doc.type=="blog") knitr::include_graphics("/img/kba_news4.png")
+if(doc.type=="blog") knitr::include_graphics("sampling_trought_time_pt.png")
 ```
 
 
