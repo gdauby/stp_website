@@ -60,7 +60,7 @@ We conducted a botanical expedition at the Pico de São Tomé that revealed the 
 
 ```{r, echo=F, out.width='55%', fig.align="center", fig.cap="The team that went to the Pico in September 2021"}
 # if(doc.type=="local_rmd") knitr::include_graphics("D:/MonDossierR/stp_website_backup//static/img/team_pico.jpg")
-if(doc.type=="blog") knitr::include_graphics("team_pico.jpg")
+if(doc.type=="blog") knitr::include_graphics("./static/img/team_pico.jpg")
 ```
 
 \vspace{-10truemm}
